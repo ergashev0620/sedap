@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/order.module.css";
-import { orderListData } from "./Data";
+import orderListData from "./Data";
 
 export default function Table() {
   return (

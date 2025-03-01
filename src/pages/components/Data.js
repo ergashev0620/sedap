@@ -1,4 +1,4 @@
-export const orderListData = [
+const orderListData = [
   {
     userId: 765231,
     date: "26 March 2020, 12:42 AM",
@@ -48,3 +48,5 @@ export const orderListData = [
     status: "Delivered",
   },
 ];
+
+export default orderListData;
