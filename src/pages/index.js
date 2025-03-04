@@ -1,7 +1,20 @@
 import Head from "next/head";
+import Image from "next/image";
+import { Geist, Geist_Mono } from "next/font/google";
+import MainLayout from "@/components/common/layouts/MainLayout";
 import styles from "@/styles/Home.module.css";
 
-export default function Home() {
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export default function Dashboard() {
   return (
     <>
       <Head>
@@ -11,8 +24,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h1>home</h1>
+        
       </div>
     </>
   );
 }
+
+Dashboard.getLayout = (pageProps) => (
+  <MainLayout>
+    <Dashboard {...pageProps} />
+  </MainLayout>
+)

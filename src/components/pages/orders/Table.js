@@ -119,7 +119,9 @@ function TableMap() {
           <td className={styles["td"]}>{item.location}</td>
           <td className={styles["td"]}>${item.amount}</td>
           <td className={styles["td"]}>
-            <div className={styles["orderStatus"]}>{item.status}</div>
+            {item.status === 'On Delivery' ? (<div className={styles["onDelivery"]}>{item.status}</div>) : ''}
+            {item.status === 'New Order' ? (<div className={styles["newOrder"]}>{item.status}</div>) : ''}
+            {item.status === 'Delivered' ? (<div className={styles["delivered"]}>{item.status}</div>) : ''}
           </td>
         </tr>
       ))}
