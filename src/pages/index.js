@@ -23,9 +23,7 @@ export default function Dashboard() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        
-      </div>
+      <div></div>
     </>
   );
 }
@@ -34,4 +32,4 @@ Dashboard.getLayout = (pageProps) => (
   <MainLayout>
     <Dashboard {...pageProps} />
   </MainLayout>
-)
+);
