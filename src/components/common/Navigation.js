@@ -12,72 +12,84 @@ function Navigation(props) {
 
   const links = [
     {
+      id: 1,
       linkName: "Dashboard",
       linkImg: "./home.png",
       href: "/",
       active: true,
     },
     {
+      id: 2,
       linkName: "Order List",
       linkImg: "./list.png",
       href: "/orders",
       active: true,
     },
     {
+      id: 3,
       linkName: "Order Detail",
       linkImg: "./order.png",
       href: "/orderDetail",
       active: true,
     },
     {
+      id: 4,
       linkName: "Customers",
       linkImg: "./Customer.png",
       href: "/customers",
       active: true,
     },
     {
+      id: 5,
       linkName: "Analytics",
       linkImg: "./analis.png",
       href: "/analis",
       active: true,
     },
     {
+      id: 6,
       linkName: "Review",
       linkImg: "./review.png",
       href: "/review",
       active: true,
     },
     {
+      id: 7,
       linkName: "Foods",
       linkImg: "./food.png",
       href: "/food",
       active: true,
     },
     {
+      id: 8,
       linkName: "Food Detail",
       linkImg: "./foodDetail.png",
       href: "/foodDetail",
       active: true,
     },
     {
+      id: 9,
       linkName: "Customer Detail",
       linkImg: "./customerDetail.png",
       href: "/customerDetail",
       active: true,
     },
     {
+      id: 10,
       linkName: "Calendar",
       linkImg: "./calendar.png",
       href: "/calendar",
       active: true,
     },
     {
+      id: 11,
       linkName: "Chat",
       linkImg: "./chat.png",
       href: "/chat",
       active: true,
     },
     {
+      id: 12,
       linkName: "Wallet",
       linkImg: "./wallet.png",
       href: "/wallet",
@@ -107,10 +119,10 @@ function Navigation(props) {
           </p>
         </div>
         <div className={styles["buttonsMenu"]}>
-          {links.map(() => {
+          {links.map(({ id, href, linkName, linkImg, active }) => {
             return (
               <Links
-                key={href}
+                key={id}
                 linkName={linkName}
                 linkImg={linkImg}
                 href={href}
