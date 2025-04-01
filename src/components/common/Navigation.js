@@ -14,84 +14,84 @@ function Navigation(props) {
     {
       id: 1,
       linkName: "Dashboard",
-      linkImg: "./home.png",
+      linkImg: "/home.png",
       href: "/",
       active: true,
     },
     {
       id: 2,
       linkName: "Order List",
-      linkImg: "./list.png",
+      linkImg: "/list.png",
       href: "/orders",
       active: true,
     },
     {
       id: 3,
       linkName: "Order Detail",
-      linkImg: "./order.png",
+      linkImg: "/order.png",
       href: "/orderDetail",
       active: true,
     },
     {
       id: 4,
       linkName: "Customers",
-      linkImg: "./Customer.png",
+      linkImg: "/Customer.png",
       href: "/customers",
       active: true,
     },
     {
       id: 5,
       linkName: "Analytics",
-      linkImg: "./analis.png",
+      linkImg: "/analis.png",
       href: "/analis",
       active: true,
     },
     {
       id: 6,
       linkName: "Review",
-      linkImg: "./review.png",
+      linkImg: "/review.png",
       href: "/review",
       active: true,
     },
     {
       id: 7,
       linkName: "Foods",
-      linkImg: "./food.png",
+      linkImg: "/food.png",
       href: "/food",
       active: true,
     },
     {
       id: 8,
       linkName: "Food Detail",
-      linkImg: "./foodDetail.png",
+      linkImg: "/foodDetail.png",
       href: "/foodDetail",
       active: true,
     },
     {
       id: 9,
       linkName: "Customer Detail",
-      linkImg: "./customerDetail.png",
+      linkImg: "/customerDetail.png",
       href: "/customerDetail",
       active: true,
     },
     {
       id: 10,
       linkName: "Calendar",
-      linkImg: "./calendar.png",
+      linkImg: "/calendar.png",
       href: "/calendar",
       active: true,
     },
     {
       id: 11,
       linkName: "Chat",
-      linkImg: "./chat.png",
+      linkImg: "/chat.png",
       href: "/chat",
       active: true,
     },
     {
       id: 12,
       linkName: "Wallet",
-      linkImg: "./wallet.png",
+      linkImg: "/wallet.png",
       href: "/wallet",
       active: true,
     },
@@ -107,7 +107,13 @@ function Navigation(props) {
 
       <aside className={styles["aside"]}>
         <div className={styles["aside-header"]}>
-          <Image src="./Sedap.png" alt="" className={styles["logo"]} />
+          <Image
+            src="/Sedap.png"
+            alt=""
+            className={styles["logo"]}
+            width={167}
+            height={49}
+          />
           <p
             style={{
               color: "#B9BBBD",
@@ -119,17 +125,15 @@ function Navigation(props) {
           </p>
         </div>
         <div className={styles["buttonsMenu"]}>
-          {links.map(({ id, href, linkName, linkImg, active }) => {
-            return (
-              <Links
-                key={id}
-                linkName={linkName}
-                linkImg={linkImg}
-                href={href}
-                active={active}
-              />
-            );
-          })}
+          {links.map(({ id, href, linkName, linkImg, active }) => (
+            <Links
+              key={id}
+              linkName={linkName}
+              linkImg={linkImg}
+              href={href}
+              active={active}
+            />
+          ))}
         </div>
         <div className={styles["addMenus"]}>
           <div className={styles["addMenusText"]}>
@@ -150,7 +154,8 @@ function Navigation(props) {
 }
 
 function Links(props) {
-  const [linkName, linkImg, href, active] = props;
+  const { linkName, linkImg, href, active } = props;
+  const router = useRouter();
   return (
     <>
       <Link
@@ -161,7 +166,7 @@ function Links(props) {
           color: router.asPath === href ? "#177556" : "",
         }}
       >
-        <Image src={linkImg} alt={linkName} />
+        <Image src={linkImg} alt={linkName} width={20} height={20} />
         {linkName}
       </Link>
     </>
