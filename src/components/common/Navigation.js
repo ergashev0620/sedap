@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import styles from "@/styles/Aside.module.css";
 import Section from "./Section";
-import Image from "next/Image";
+import Image from "next/image";
 
 function Navigation(props) {
   const router = useRouter();
