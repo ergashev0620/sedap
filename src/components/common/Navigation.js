@@ -110,6 +110,7 @@ function Navigation(props) {
           {links.map(() => {
             return (
               <Links
+                key={href}
                 linkName={linkName}
                 linkImg={linkImg}
                 href={href}
