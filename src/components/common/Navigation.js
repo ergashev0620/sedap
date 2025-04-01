@@ -35,7 +35,7 @@ function Navigation(props) {
     {
       id: 4,
       linkName: "Customers",
-      linkImg: "/Customer.png",
+      linkImg: "/customer.png",
       href: "/customers",
       active: true,
     },
