@@ -95,7 +95,7 @@ function Navigation(props) {
 
       <aside className={styles["aside"]}>
         <div className={styles["aside-header"]}>
-          <img src="./Sedap.png" alt="" className={styles["logo"]} />
+          <Image src="./Sedap.png" alt="" className={styles["logo"]} />
           <p
             style={{
               color: "#B9BBBD",
