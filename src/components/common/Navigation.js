@@ -8,6 +8,66 @@ import Section from "./Section";
 function Navigation(props) {
   const router = useRouter();
   console.log("router", router.asPath);
+
+  const links = [
+    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    },
+    {
+      linkName: "Order List",
+      linkImg: "./list.png",
+      href: "/orders",
+      active: true
+    },    {
+      linkName: "Order Detail",
+      linkImg: "./order.png",
+      href: "/orderDetail",
+      active: true
+    },    {
+      linkName: "Customers",
+      linkImg: "./Customer.png",
+      href: "/customers",
+      active: true
+    },    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    },    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    },    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    },    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    },    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    },    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    },    {
+      linkName: "Dashboard",
+      linkImg: "./home.png",
+      href: "/",
+      active: true
+    }, 
+  ]
   return (
     <div>
       <Head>
@@ -23,27 +83,9 @@ function Navigation(props) {
           <p style={{ color: '#B9BBBD', fontSize: "18px", backgroundColor: 'unset' }}>Modern Admin Dashboard</p>
         </div>
         <div className={styles['buttonsMenu']}>
-          <Link className={`${router.asPath === '/' ? styles.active : ''}`} href='/'
-            style={{
-              background: router.asPath === '/' ? '#00B07426' : '',
-              color: router.asPath === '/' ? '#177556' : ''
-            }}
-          ><img src="./home.png" alt="" />Dashboard</Link>
-          <Link className={`${router.asPath === '/orders' ? styles.active : ''}`} href='/orders'
-            style={{
-              background: router.asPath === '/orders' ? '#00B07426' : '',
-              color: router.asPath === '/orders' ? '#177556' : ''
-            }}><img src="./list.png" alt="" />Order List</Link>
-          <Link className={`${router.asPath === '/orderDetail' ? styles.active : ''}`} href='#'
-            style={{
-              background: router.asPath === '/orderDetail' ? '#00B07426' : '',
-              color: router.asPath === '/orderDetail' ? '#177556' : ''
-            }}><img src="./order.png" alt="" />Order Detail</Link>
-          <Link className={`${router.asPath === '/customers' ? styles.active : ''}`} href='/customers'
-            style={{
-              background: router.asPath === '/customers' ? '#00B07426' : '',
-              color: router.asPath === '/customers' ? '#177556' : ''
-            }}><img src="./customer.png" alt="" />Customer</Link>
+          {links.map(() => {
+            return (<Links linkName={linkName} linkImg={linkImg} href={href} active={active}/>)
+          })}
           <Link className={`${router.asPath === '/analis' ? styles.active : ''}`} href='#'
             style={{
               background: router.asPath === '/analis' ? '#00B07426' : '',
@@ -105,6 +147,20 @@ function Navigation(props) {
       {/* <Section/> */}
     </div>
   );
+}
+
+function Links(props) {
+  const [linkName, linkImg, href, active] = props
+  return (
+    <>
+      <Link className={`${router.asPath === href ? styles.active : ''}`} href={href}
+        style={{
+          background: router.asPath === href ? '#00B07426' : '',
+          color: router.asPath === href ? '#177556' : ''
+        }}
+      ><img src={linkImg} alt={linkName} />{linkName}</Link>
+    </>
+  )
 }
 
 export default Navigation;
