@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/customers.module.css";
 import CustomerData from "./CustomerData";
+import { useRouter } from "next/navigation";
 
 export default function CustomerTable() {
   return (
@@ -109,10 +110,19 @@ export default function CustomerTable() {
 }
 
 function TableMap() {
+  const route = useRouter();
+  const goToDetails = (id) => {
+    route.push(`/${id}`);
+  };
   return (
     <>
       {CustomerData.map((item) => (
-        <tr key={item.userId} className={styles["tr2"]}>
+        <tr
+          key={item.userId}
+          className={styles["tr2"]}
+          style={{ cursor: "pointer" }}
+          onClick={() => goToDetails(item.userId)}
+        >
           <td className={styles["td"]}>#C-{item.userId}</td>
           <td className={styles["td"]}>{item.date}</td>
           <td className={styles["td"]}>{item.userName}</td>

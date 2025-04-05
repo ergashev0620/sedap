@@ -80,6 +80,7 @@
 .tr2 {
   height: 70px;
   background-color: white;
+  cursor: pointer;
   /* align-items: center; */
 }
 .onDelivery {

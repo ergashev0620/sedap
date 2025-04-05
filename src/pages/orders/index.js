@@ -20,7 +20,7 @@ export default function Orders() {
 }
 
 Orders.getLayout = (pageProps) => (
-    <MainLayout>
-      <Orders {...pageProps} />
-    </MainLayout>
-)
+  <MainLayout>
+    <Orders {...pageProps} />
+  </MainLayout>
+);

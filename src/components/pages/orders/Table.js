@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/order.module.css";
 import orderListData from "./Data";
+import { useRouter } from "next/router";
 
 export default function Table() {
   return (
@@ -109,19 +110,40 @@ export default function Table() {
 }
 
 function TableMap() {
+  const route = useRouter();
+  const goToDetails = (id) => {
+    route.push(`/orders/${id}`);
+  };
   return (
     <>
       {orderListData.map((item) => (
-        <tr key={item.userId} className={styles["tr2"]}>
+        <tr
+          key={item.userId}
+          className={styles["tr2"]}
+          style={{ cursor: "pointer" }}
+          onClick={() => goToDetails(item.userId)}
+        >
           <td className={styles["td"]}>#{item.userId}</td>
           <td className={styles["td"]}>{item.date}</td>
           <td className={styles["td"]}>{item.userName}</td>
           <td className={styles["td"]}>{item.location}</td>
           <td className={styles["td"]}>${item.amount}</td>
           <td className={styles["td"]}>
-            {item.status === 'On Delivery' ? (<div className={styles["onDelivery"]}>{item.status}</div>) : ''}
-            {item.status === 'New Order' ? (<div className={styles["newOrder"]}>{item.status}</div>) : ''}
-            {item.status === 'Delivered' ? (<div className={styles["delivered"]}>{item.status}</div>) : ''}
+            {item.status === "On Delivery" ? (
+              <div className={styles["onDelivery"]}>{item.status}</div>
+            ) : (
+              ""
+            )}
+            {item.status === "New Order" ? (
+              <div className={styles["newOrder"]}>{item.status}</div>
+            ) : (
+              ""
+            )}
+            {item.status === "Delivered" ? (
+              <div className={styles["delivered"]}>{item.status}</div>
+            ) : (
+              ""
+            )}
           </td>
         </tr>
       ))}
