@@ -3,12 +3,11 @@ import orderListData from "@/components/pages/orders/Data";
 function OrderDetail() {
   const route = useParams();
   const currentOrder = orderListData.find((item) => {
-    if (item.userId === parseInt(route?.id)) {
+    if (item.orderID === parseInt(route?.id)) {
       return true;
     }
   });
-  console.log("OrderDetail", currentOrder);
-  return <div>Hello {currentOrder.userId}</div>;
+  return <div>Hello. This is Order ID {currentOrder?.orderID}</div>;
 }
 
 export default OrderDetail;
