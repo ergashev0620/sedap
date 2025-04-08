@@ -1,0 +1,20 @@
+.container {
+  background-color: aliceblue;
+  width: 100%;
+}
+.orderFilterNav {
+  display: flex;
+  justify-content: space-between;
+}
+.pagetitleh1 {
+  font-size: 32px;
+}
+.pagetitleP {
+  font-size: 18px;
+}
+.cancel {
+  padding: 18px 65px;
+  background-color: unset;
+  border: 1px solid #ff5b5b;
+  border-radius: 12px;
+}
