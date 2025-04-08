@@ -93,3 +93,24 @@
   border-radius: 15px;
   color: #177556;
 }
+
+.orderTable .th:nth-child(1) {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.orderTable .th:nth-child(6) {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.orderTable tbody .tr:hover {
+  background-color: aliceblue;
+}
+.orderTable .td:nth-child(1) {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.orderTable .td:nth-child(8) {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
