@@ -1,6 +1,6 @@
 import { useParams } from "next/navigation";
 import CustomerData from "@/components/pages/customers/CustomerData";
-function OrderDetail() {
+function CustomerDetail() {
   const route = useParams();
   const currentOrder = CustomerData.find((item) => {
     if (item.userId === parseInt(route?.id)) {
@@ -10,4 +10,4 @@ function OrderDetail() {
   return <div>Hello. This is User ID {currentOrder?.userId}</div>;
 }
 
-export default OrderDetail;
+export default CustomerDetail;

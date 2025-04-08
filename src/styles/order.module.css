@@ -1,14 +1,6 @@
 .orderDiv {
   display: flex;
-<<<<<<< HEAD
   justify-content: space-between;
-=======
-  width: 100%;
-  height: 68px;
-  justify-content: center;
-  justify-content: space-between;
-  margin: 40px 0;
->>>>>>> main
   font-family: "Barlow", sans-serif;
   margin-bottom: 40px;
 }
@@ -47,16 +39,7 @@
   font-family: "Barlow", sans-serif;
   border-collapse: collapse;
 }
-<<<<<<< HEAD
 .orderTable thead {
-=======
-.th,
-.td {
-  padding: 0px 55px;
-}
-.tr {
-  height: 70px;
->>>>>>> main
   background-color: #00b074;
   color: white;
 }
