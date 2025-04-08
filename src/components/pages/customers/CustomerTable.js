@@ -74,7 +74,7 @@ function TableRow(props) {
   const { item } = props;
   const route = useRouter();
   const goToDetails = (id) => {
-    route.push(`/orders/${id}`);
+    route.push(`/customers/${id}`);
   };
   return (
     <tr
