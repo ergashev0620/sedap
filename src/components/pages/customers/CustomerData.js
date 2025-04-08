@@ -1,52 +1,52 @@
-const orderListData = [
+const CustomerData = [
   {
-    orderID: 765231,
+    userId: 765231,
     date: "26 March 2020, 12:42 AM",
     userName: "Mikasa Ackerman",
     location: "Corner Street 5th London",
     amount: 164.52,
-    status: "New Order",
+    lastAmount: 98,
   },
   {
-    orderID: 135231,
+    userId: 135231,
     date: "26 March 2020, 12:42 AM",
     userName: "Mikasa Ackerman",
     location: "Corner Street 5th London",
     amount: 164.52,
-    status: "On Delivery",
+    lastAmount: 98,
   },
   {
-    orderID: 325231,
+    userId: 325231,
     date: "26 March 2020, 12:42 AM",
     userName: "Mikasa Ackerman",
     location: "Corner Street 5th London",
     amount: 164.52,
-    status: "Delivered",
+    lastAmount: 98,
   },
   {
-    orderID: 555231,
+    userId: 555231,
     date: "26 March 2020, 12:42 AM",
     userName: "Mikasa Ackerman",
     location: "Corner Street 5th London",
     amount: 164.52,
-    status: "New Order",
+    lastAmount: 98,
   },
   {
-    orderID: 523231,
+    userId: 523231,
     date: "26 March 2020, 12:42 AM",
     userName: "Mikasa Ackerman",
     location: "Corner Street 5th London",
     amount: 164.52,
-    status: "On Delivery",
+    lastAmount: 98,
   },
   {
-    orderID: 558831,
+    userId: 558831,
     date: "26 March 2020, 12:42 AM",
     userName: "Mikasa Ackerman",
     location: "Corner Street 5th London",
     amount: 164.52,
-    status: "Delivered",
+    lastAmount: 98,
   },
 ];
 
-export default orderListData;
+export default CustomerData;

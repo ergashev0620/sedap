@@ -20,7 +20,7 @@ export default function Customers() {
 }
 
 Customers.getLayout = (pageProps) => (
-    <MainLayout>
-      <Customers {...pageProps} />
-    </MainLayout>
-)
+  <MainLayout>
+    <Customers {...pageProps} />
+  </MainLayout>
+);

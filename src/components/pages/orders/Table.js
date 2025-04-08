@@ -1,130 +1,108 @@
 import React from "react";
 import styles from "@/styles/order.module.css";
 import orderListData from "./Data";
+import { useRouter } from "next/router";
 
 export default function Table() {
+  const columns = [
+    {
+      id: "0",
+      name: "Order ID",
+    },
+    {
+      id: "1",
+      name: "Date",
+    },
+    {
+      id: "2",
+      name: "Customer Name",
+    },
+    {
+      id: "3",
+      name: "Location",
+    },
+    {
+      id: "4",
+      name: "Amount",
+    },
+    {
+      id: "5",
+      name: "Status Order",
+    },
+  ];
+
   return (
-    <>
-      <table className={styles["table"]}>
-        <thead>
-          <tr className={styles["tr"]}>
-            <th className={styles["th"]}>
-              <div>
-                <p>Order ID</p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    margin: "10px",
-                  }}
-                >
-                  <img src="./Vector1.png" />
-                  <img src="./Vector2.png" />
-                </div>
-              </div>
-            </th>
-            <th className={styles["th"]}>
-              <div>
-                <p>Date</p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    margin: "10px",
-                  }}
-                >
-                  <img src="./Vector1.png" />
-                  <img src="./Vector2.png" />
-                </div>
-              </div>
-            </th>
-            <th className={styles["th"]}>
-              <div>
-                <p>Customer Name</p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    margin: "10px",
-                  }}
-                >
-                  <img src="./Vector1.png" />
-                  <img src="./Vector2.png" />
-                </div>
-              </div>
-            </th>
-            <th className={styles["th"]}>
-              <div>
-                <p>Location</p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    margin: "10px",
-                  }}
-                >
-                  <img src="./Vector1.png" />
-                  <img src="./Vector2.png" />
-                </div>
-              </div>
-            </th>
-            <th className={styles["th"]}>
-              <div>
-                <p>Amount</p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    margin: "10px",
-                  }}
-                >
-                  <img src="./Vector1.png" />
-                  <img src="./Vector2.png" />
-                </div>
-              </div>
-            </th>
-            <th className={styles["th"]}>
-              <div>
-                <p>Status Order</p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    margin: "10px",
-                  }}
-                >
-                  <img src="./Vector1.png" />
-                  <img src="./Vector2.png" />
-                </div>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <TableMap />
-        </tbody>
-      </table>
-    </>
+    <table className={styles["orderTable"]}>
+      <thead>
+        <tr className={styles["tr"]}>
+          {columns.map((col) => (
+            <TableHead key={col.id} name={col.name} />
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {orderListData.map((item) => (
+          <TableRow key={item.orderID} item={item} />
+        ))}
+      </tbody>
+    </table>
   );
 }
 
-function TableMap() {
+function TableHead({ name }) {
   return (
-    <>
-      {orderListData.map((item) => (
-        <tr key={item.userId} className={styles["tr2"]}>
-          <td className={styles["td"]}>#{item.userId}</td>
-          <td className={styles["td"]}>{item.date}</td>
-          <td className={styles["td"]}>{item.userName}</td>
-          <td className={styles["td"]}>{item.location}</td>
-          <td className={styles["td"]}>${item.amount}</td>
-          <td className={styles["td"]}>
-            {item.status === 'On Delivery' ? (<div className={styles["onDelivery"]}>{item.status}</div>) : ''}
-            {item.status === 'New Order' ? (<div className={styles["newOrder"]}>{item.status}</div>) : ''}
-            {item.status === 'Delivered' ? (<div className={styles["delivered"]}>{item.status}</div>) : ''}
-          </td>
-        </tr>
-      ))}
-    </>
+    <th className={styles["th"]}>
+      <div>
+        <p>{name}</p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            margin: "10px",
+          }}
+        >
+          <img src="./Vector1.png" />
+          <img src="./Vector2.png" />
+        </div>
+      </div>
+    </th>
+  );
+}
+
+function TableRow(props) {
+  const { item } = props;
+  const route = useRouter();
+  const goToDetails = (id) => {
+    route.push(`/orders/${id}`);
+  };
+  return (
+    <tr
+      className={styles["tr"]}
+      style={{ cursor: "pointer" }}
+      onClick={() => goToDetails(item.orderID)}
+    >
+      <td className={styles["td"]}>#{item.orderID}</td>
+      <td className={styles["td"]}>{item.date}</td>
+      <td className={styles["td"]}>{item.userName}</td>
+      <td className={styles["td"]}>{item.location}</td>
+      <td className={styles["td"]}>${item.amount}</td>
+      <td className={styles["td"]}>
+        {item.status === "On Delivery" ? (
+          <div className={styles["onDelivery"]}>{item.status}</div>
+        ) : (
+          ""
+        )}
+        {item.status === "New Order" ? (
+          <div className={styles["newOrder"]}>{item.status}</div>
+        ) : (
+          ""
+        )}
+        {item.status === "Delivered" ? (
+          <div className={styles["delivered"]}>{item.status}</div>
+        ) : (
+          ""
+        )}
+      </td>
+    </tr>
   );
 }
