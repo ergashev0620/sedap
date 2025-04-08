@@ -9,7 +9,10 @@ function OrdersList() {
   return (
     <>
       <div className={styles["orderDiv"]}>
-        <PageTitle title="Your Orders" subtitle="This is your order list data" />
+        <PageTitle
+          title="Your Orders"
+          subtitle="This is your order list data"
+        />
         <div className={styles["calendar"]}>
           <Status />
           <Calendar />

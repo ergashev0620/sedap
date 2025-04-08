@@ -1,9 +1,9 @@
 import { useParams } from "next/navigation";
-import orderListData from "@/components/pages/orders/Data";
+import CustomerData from "@/components/pages/customers/CustomerData";
 function OrderDetail() {
   const route = useParams();
-  const currentOrder = orderListData.find((item) => {
-    if (item.orderID === parseInt(route?.id)) {
+  const currentOrder = CustomerData.find((item) => {
+    if (item.userId === parseInt(route?.id)) {
       return true;
     }
   });
