@@ -8,7 +8,6 @@ import Image from "next/image";
 
 function Navigation(props) {
   const router = useRouter();
-  console.log("router", router.asPath);
 
   const links = [
     {
@@ -25,6 +24,13 @@ function Navigation(props) {
       href: "/orders",
       active: true,
     },
+    // {
+    //   id: 8,
+    //   linkName: "Order Detail",
+    //   linkImg: "/orderDetail.png",
+    //   href: "/orderDetail",
+    //   active: true,
+    // },
     {
       id: 4,
       linkName: "Customers",
@@ -118,6 +124,7 @@ function Navigation(props) {
               linkImg={linkImg}
               href={href}
               active={active}
+              router={router}
             />
           ))}
         </div>
@@ -134,14 +141,12 @@ function Navigation(props) {
           <p>Made with ♥ by Peterdraw</p>
         </div>
       </aside>
-      {/* <Section/> */}
     </div>
   );
 }
 
 function Links(props) {
-  const { linkName, linkImg, href, active } = props;
-  const router = useRouter();
+  const { linkName, linkImg, href, active, router } = props;
   return (
     <>
       <Link
