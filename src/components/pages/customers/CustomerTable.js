@@ -82,7 +82,7 @@ function TableRow(props) {
       style={{ cursor: "pointer" }}
       onClick={() => goToDetails(item.userId)}
     >
-      <td className={styles["td"]}>#C-{item.userId}</td>
+      <td className={styles["td"]}>#C-{item.id}</td>
       <td className={styles["td"]}>{item.date}</td>
       <td className={styles["td"]}>{item.customer.name}</td>
       <td className={styles["td"]}>{item.location}</td>

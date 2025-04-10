@@ -27,9 +27,7 @@ function OrderDetail() {
 
   useEffect(() => {
     if (orderId) {
-      const foundOrder = orderListData.find(
-        (order) => order.id === parseInt(orderId)
-      );
+      const foundOrder = orderListData.find((order) => order.id === orderId);
       setCurrentOrder(foundOrder);
     }
   }, [orderId]);
