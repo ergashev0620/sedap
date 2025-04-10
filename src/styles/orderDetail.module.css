@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  width: 1468px;
 }
 .orderFilterNav {
   display: flex;
@@ -19,49 +20,47 @@
   border-radius: 12px;
   cursor: pointer;
 }
-.cancel:hover{
+.cancel:hover {
   background-color: #ff5b5b;
   color: white;
-  transition: .5s;
+  transition: 0.5s;
 }
-.calendar1{
+.calendar1 {
   padding: 18px 65px;
-  background-color: #00B074;
+  background-color: #00b074;
   border-radius: 12px;
-  border: 1px solid #00B074;
+  border: 1px solid #00b074;
   color: white;
   outline-style: none;
   margin-left: 40px;
   cursor: pointer;
 }
-.calendar1:hover{
+.calendar1:hover {
   background-color: white;
   color: black;
-  border: 1px solid #00B074;
-  transition: .5s;
+  border: 1px solid #00b074;
+  transition: 0.5s;
 }
-.itemSection{
+.itemSection {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.aboutUser{
-  width: 24%;
-  background-color: aliceblue;
+.aboutUser {
+  width: 339px;
   border-radius: 16px;
 }
-.aboutOrders{
-  width: 73%;
-  background-color: blue;
+.aboutOrders {
+  width: 1089px;
 }
-.aboutUserCard > p{
+.aboutUserCard > p {
   font-size: 18px;
-  color: #3E4954;
+  color: #3e4954;
   text-align: center;
 }
-.aboutUserCard > div:nth-child(3){
-  background-color: #00B07426;
-  color: #00B074;
+.aboutUserCard > div:nth-child(3) {
+  background-color: #00b07426;
+  color: #00b074;
   border-radius: 6px;
   margin: 0px auto;
   width: 93px;
@@ -70,17 +69,17 @@
   text-align: center;
   font-size: 12px;
 }
-.noteOrder{
+.noteOrder {
   width: 100%;
   border-radius: 16px;
-  background-color: #5E6C93;
+  background-color: #5e6c93;
 }
-.noteOrder h2{
+.noteOrder h2 {
   font-size: 24px;
   color: white;
   padding: 30px 0px 0px 30px;
 }
-.noteOrder > p{
+.noteOrder > p {
   font-size: 14px;
   color: white;
   line-height: 26px;
@@ -88,13 +87,45 @@
   font-weight: 400;
   width: 340px;
 }
-.manzil{
+.manzil {
   display: flex;
   align-items: center;
-  background-color: #2D9CDB;
+  background-color: #2d9cdb;
   border-radius: 16px;
 }
-.manzil p{
+.manzil p {
   color: white;
   width: 157px;
+}
+.detailtable {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid rgb(241, 241, 241);
+  margin-bottom: 40px;
+}
+.usertd {
+  padding: 50px 0px;
+}
+.detailtable .userth {
+  background-color: #00b074;
+  padding: 15px 0px;
+}
+.karta {
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 16px;
+}
+.karta > div {
+  width: 1030px;
+  height: 350px;
+  background-color: gray;
+  border-radius: 16px;
+  margin: 30px 30px;
+}
+.aboutDriver {
+  width: 1030px;
+  padding: 30px;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/order.module.css";
-import orderListData from "./Data";
+import { orderListData } from "../../../pages/Data";
 import { useRouter } from "next/router";
 
 export default function Table() {
@@ -82,7 +82,7 @@ function TableRow(props) {
     >
       <td className={styles["td"]}>#{item.orderID}</td>
       <td className={styles["td"]}>{item.date}</td>
-      <td className={styles["td"]}>{item.userName}</td>
+      <td className={styles["td"]}>{item.customer.name}</td>
       <td className={styles["td"]}>{item.location}</td>
       <td className={styles["td"]}>${item.amount}</td>
       <td className={styles["td"]}>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/customers.module.css";
-import CustomerData from "./CustomerData";
+import { orderListData } from "@/pages/Data";
 import { useRouter } from "next/navigation";
 
 export default function CustomerTable() {
@@ -84,7 +84,7 @@ function TableRow(props) {
     >
       <td className={styles["td"]}>#C-{item.userId}</td>
       <td className={styles["td"]}>{item.date}</td>
-      <td className={styles["td"]}>{item.userName}</td>
+      <td className={styles["td"]}>{item.customer.name}</td>
       <td className={styles["td"]}>{item.location}</td>
       <td className={styles["td1"]}>${item.amount}</td>
       <td className={styles["td12"]}>${item.lastAmount}</td>

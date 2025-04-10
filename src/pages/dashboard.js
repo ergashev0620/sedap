@@ -1,16 +1,7 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import MainLayout from "@/components/common/layouts/MainLayout";
 
-export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (router.pathname === "/") {
-      router.replace("/dashboard");
-    }
-  }, [router]);
-
+export default function Dashboard() {
   return (
     <>
       <Head>
@@ -19,7 +10,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div></div>
+      <div>Dashboard</div>
     </>
   );
 }
+
+Dashboard.getLayout = (pageProps) => (
+  <MainLayout>
+    <Dashboard {...pageProps} />
+  </MainLayout>
+);
