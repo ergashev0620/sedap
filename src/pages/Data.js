@@ -10,7 +10,20 @@ export const orderListData = [
       id: 1,
       name: "Mikasa Ackerman",
     },
+    deliveredBy: {
+      id: "1",
+      name: "Gudakkina",
+    },
     items: [
+      {
+        id: "1",
+        noteOrder:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        manzil: "6 The Avenue, London EC50 4GN",
+        name: "Watermelon juice with ice",
+        qty: 5,
+        price: 10,
+      },
       {
         id: "1",
         noteOrder:
