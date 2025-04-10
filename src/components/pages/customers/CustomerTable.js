@@ -41,7 +41,7 @@ export default function CustomerTable() {
           </tr>
         </thead>
         <tbody>
-          {CustomerData.map((item) => (
+          {orderListData.map((item) => (
             <TableRow key={item.userId} item={item} />
           ))}
         </tbody>
