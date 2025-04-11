@@ -63,8 +63,8 @@ function TableHead({ name }) {
             margin: "10px",
           }}
         >
-          <Image src="./Vector1.png" alt="vector" width={10.5} height={6}/>
-          <Image src="./Vector2.png" alt="vector" width={10.5} height={6}/>
+          <Image src="/Vector1.png" alt="vector" width={10.5} height={6}/>
+          <Image src="/Vector2.png" alt="vector" width={10.5} height={6}/>
         </div>
       </div>
     </th>

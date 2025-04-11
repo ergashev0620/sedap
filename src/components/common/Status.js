@@ -6,7 +6,7 @@ function Status() {
     return (
         <div>
             <div className={styles['status']}>
-                <Image src="./allstatus.png" alt="allstatus" width={24} height={24} />
+                <Image src="/allstatus.png" alt="allstatus" width={24} height={24} />
                 <select>
                     <option>All Status</option>
                     <option>All Status1</option>
