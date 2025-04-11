@@ -117,8 +117,8 @@ function OrderDetail() {
                     </div>
                   </div>
                   <div className={styles['phoneAndTime']}>
-                    <Button title={'Telephone'} phoneNumber={currentOrder.deliveredBy.time} src={'/phoneIcon.png'} />
-                    <Button title={'Delivery Time'} phoneNumber={currentOrder.deliveredBy.time} src={'/shipping.png'} />
+                    <Button title={'Telephone'} phoneNumber={currentOrder.deliveredBy.phone} src={'/phoneIcon.png'} />
+                    <Button title={'Delivery Time'} time={currentOrder.deliveredBy.time} src={'/shipping.png'} />
                   </div>
                 </div>
               </div>
@@ -137,7 +137,7 @@ function OrderDetail() {
 export default OrderDetail;
 
 function Button(props) {
-  const { title, phoneNumber, src } = props
+  const { title, phoneNumber, src, time } = props
   return (
     <button>
       <div>
@@ -145,7 +145,7 @@ function Button(props) {
       </div>
       <div className={styles['numDrAndTime']}>
         <p>{title}</p>
-        <p>{phoneNumber}</p>
+        <p>{phoneNumber} {time}</p>
       </div>
     </button>
   )
