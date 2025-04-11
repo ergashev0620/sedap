@@ -1,4 +1,4 @@
-import { orderListData as d } from "@/pages/Data";
+import { orderListData as d } from "@/Data";
 import MainLayout from "@/components/common/layouts/MainLayout";
 import styles from "@/styles/orderDetail.module.css";
 import Image from "next/image";

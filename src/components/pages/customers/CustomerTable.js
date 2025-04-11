@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "@/styles/customers.module.css";
-import { orderListData } from "@/pages/Data";
+import { orderListData } from "@/Data";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function CustomerTable() {
   const columns = [
@@ -62,8 +63,8 @@ function TableHead({ name }) {
             margin: "10px",
           }}
         >
-          <img src="./Vector1.png" />
-          <img src="./Vector2.png" />
+          <Image src="./Vector1.png" alt="vector" width={10.5} height={6}/>
+          <Image src="./Vector2.png" alt="vector" width={10.5} height={6}/>
         </div>
       </div>
     </th>

@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "@/styles/order.module.css";
+import Image from "next/image";
 
 function CustomerFilter() {
   return (
     <div>
       <div className={styles["status"]}>
-        <img src="./allstatus.png" />
+        <Image src="./allstatus.png" alt="allstatus" width={24} height={24}/>
         <select>
           <option>Filter</option>
           <option>Name</option>
