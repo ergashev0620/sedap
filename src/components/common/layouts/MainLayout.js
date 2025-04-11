@@ -4,15 +4,12 @@ import Navigation from "../Navigation";
 import { useRouter } from "next/router";
 
 function MainLayout(props) {
-  const router = useRouter();
-  const date = new Date().getDate();
-  const month = new Date().getMonth();
-  const year = new Date().getFullYear();
   return (
     <main
       style={{
         display: "flex",
-        // minHeight: "100vh",
+        minHeight: "100vh",
+        marginLeft: '310px',
         // minWidth: "100vw",
       }}
     >

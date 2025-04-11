@@ -1,18 +1,23 @@
-.aside{
-    width: 345px;
-    /* height: 300px; */
+.aside {
+    width: clamp(300px, 20vw, 345px);
+    height: 100vh;
+    max-height: 1430px;
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Barlow', sans-serif;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 .logo{
     background-color: unset;
 }
 .aside .aside-header{
-    margin-top: 58px;
-    margin-bottom: 58px;
+    margin-top: 28px;
+    margin-bottom: 28px;
     background-color: unset;
 }
 .buttonsMenu{
@@ -44,7 +49,6 @@
     background-color: #00B074; 
     margin-right: 15px; 
     border-radius: 4px; 
-    /* vertical-align: middle;  */
     position: absolute;
     left: -20%;
 }
@@ -55,7 +59,7 @@
 }
 .addMenus{
     width: 260px;
-    margin-top: 89px;
+    margin-top: 39px;
     display: flex;
     padding: 20px;
     background-color: #00B074;

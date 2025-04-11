@@ -1,6 +1,7 @@
 .container {
   width: 100%;
-  width: 1468px;
+  max-width: 1468px;
+  margin: 0 auto;
 }
 .orderFilterNav {
   display: flex;
@@ -97,20 +98,38 @@
   color: white;
   width: 157px;
 }
-.detailtable {
+.detailtable1{
   width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
   background-color: white;
-  border: 1px solid rgb(241, 241, 241);
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 16px;
   margin-bottom: 40px;
 }
+.detailtable {
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgb(46, 46, 46);
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+}
 .usertd {
-  padding: 50px 0px;
+  padding: 15px 20px;
+  font-size: 18px;
 }
 .detailtable .userth {
   background-color: #00b074;
-  padding: 15px 0px;
+  padding: 30px 15px;
+  text-align: center;
+  color: white;
+  font-size: 21px;
+}
+.usertd{
+  text-align: center;
+}
+.userth:nth-child(1), .usertd:nth-child(1) {
+  padding: 25px 35px;
+  text-align: left;
 }
 .karta {
   width: 100%;
@@ -118,14 +137,69 @@
   border: 1px solid rgb(241, 241, 241);
   border-radius: 16px;
 }
-.karta > div {
+.karta .kartaMap {
   width: 1030px;
   height: 350px;
   background-color: gray;
   border-radius: 16px;
   margin: 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .aboutDriver {
   width: 1030px;
-  padding: 30px;
+  padding: 40px 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.usertr {
+  border-bottom: 1px solid #eee;
+}
+.deliveryBy{
+  display: flex;
+}
+.driver p:nth-child(1){
+  font-size: 24px;
+  color: #3E4954;
+}
+.driver p:nth-child(2){
+  font-size: 14px;
+  color: #969BA0;
+}
+.driver{
+  padding-left: 30px;
+}
+.phoneAndTime{
+  display: flex;
+}
+.phoneAndTime button{
+  padding: 17px 42px;
+  border-radius: 12px;
+  border: 1px solid #2D9CDB;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  background-color: unset;
+}
+.phoneAndTime button div:nth-child(1){
+  padding: 10px;
+  background-color: #2D9CDB26;
+  border-radius: 12px;
+}
+.numDrAndTime{
+  margin-left: 13px;
+}
+.numDrAndTime p:nth-child(1){
+  text-align: left;
+  font-size: 14px;
+  color: #969BA0;
+  margin-bottom: 6px;
+}
+.numDrAndTime p:nth-child(2){
+  text-align: left;
+  font-size: 18px;
+  color: #3E4954;
 }

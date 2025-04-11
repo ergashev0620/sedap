@@ -1,7 +1,6 @@
 import { orderListData as d } from "@/pages/Data";
 import MainLayout from "@/components/common/layouts/MainLayout";
 import styles from "@/styles/orderDetail.module.css";
-import PageTitle from "../PageTitle2";
 import Image from "next/image";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -11,10 +10,22 @@ import Link from "next/link";
 function OrderDetail() {
   const router = useRouter();
   const [currentOrder, setCurrentOrder] = useState(null);
+  const [tableItems, setTableItems] = useState([]);
 
   useEffect(() => {
-    setCurrentOrder(d.find((o) => o.id === router.query.id));
+    if (router.query.id) {
+      const orderItem = d.find((o) => o.id === router.query.id)
+      if (orderItem) {
+        setCurrentOrder(orderItem);
+        setTableItems(orderItem.items)
+      }
+
+    }
   }, [router]);
+
+  const handleDelete = (id) => {
+    setTableItems((items) => items.filter((item) => item.id !== id));
+  };
 
   return (
     <>
@@ -30,7 +41,7 @@ function OrderDetail() {
             <div>
               <h1 className={styles["pagetitleh1"]}>{`Order ID #${currentOrder.id}`}</h1>
               <p className={styles["pagetitleP"]}>
-                <Link href="/orders">Orders</Link> / Order Detail
+                <Link href="/orders" style={{ color: '#00B074' }}>Orders /</Link> Order Detail
               </p>
             </div>
             <div className={styles["calendar"]}>
@@ -56,54 +67,59 @@ function OrderDetail() {
                 <div>Customer</div>
                 <div className={styles["noteOrder"]}>
                   <h2>Note Order</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.{" "}
-                  </p>
+                  <p style={{ width: '279px' }}>{currentOrder.customer.noteOrder}</p>
                   <div className={styles["manzil"]}>
                     <div
                       style={{
                         width: "49px",
                         height: "49px",
-                        background: "gray",
+                        background: "white",
                         borderRadius: "50%",
                         margin: "30px 30px",
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                       }}
-                    ></div>
-                    <p>6 The Avenue, London EC50 4GN</p>
+                    ><Image src="/shipping.png" alt="truck" width={28} height={28} /></div>
+                    <p>{currentOrder.customer.manzil}</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className={styles["aboutOrders"]}>
-              <Table items={currentOrder.items} />
+              <div className={styles["detailtable1"]}>
+                <Table items={tableItems} handleDelete={handleDelete} />
+              </div>
               <div className={styles["karta"]}>
-                <div></div>
+                <div className={styles['kartaMap']}>karta</div>
                 <p
                   style={{
                     fontSize: "24px",
                     color: "#464255",
-                    padding: "0px 0px 30px 30px",
+                    padding: "0px 0px 10px 30px",
                   }}
                 >
                   Delivery by
                 </p>
                 <div className={styles["aboutDriver"]}>
-                  <div>
-                    <div>
-                      <div
-                        style={{
-                          width: "68px",
-                          height: "68px",
-                          borderRadius: "50%",
-                          background: "gray",
-                        }}
-                      ></div>
+                  <div className={styles["deliveryBy"]}>
+                    <div
+                      style={{
+                        width: "68px",
+                        height: "68px",
+                        borderRadius: "50%",
+                        background: "gray",
+                      }}
+                    ></div>
+                    <div className={styles["driver"]}>
                       <p style={{ padding: "7px 0px" }}>{currentOrder.deliveredBy.name}</p>
-                      <p>ID - 412455</p>
+                      <p>ID - {currentOrder.deliveredBy.id}</p>
                     </div>
                   </div>
-                  <div></div>
+                  <div className={styles['phoneAndTime']}>
+                    <Button title={'Telephone'} phoneNumber={currentOrder.deliveredBy.time} src={'/phoneIcon.png'} />
+                    <Button title={'Delivery Time'} phoneNumber={currentOrder.deliveredBy.time} src={'/shipping.png'} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -120,26 +136,41 @@ function OrderDetail() {
 
 export default OrderDetail;
 
-function Table({ items }) {
+function Button(props) {
+  const { title, phoneNumber, src } = props
+  return (
+    <button>
+      <div>
+        <Image style={{ backgroundColor: 'unset' }} src={src} alt="phone" width={26} height={26} />
+      </div>
+      <div className={styles['numDrAndTime']}>
+        <p>{title}</p>
+        <p>{phoneNumber}</p>
+      </div>
+    </button>
+  )
+}
+
+function Table({ items, handleDelete }) {
   const columns = [
     {
-      id: "0",
+      id: "1",
       name: "Item",
     },
     {
-      id: "1",
+      id: "2",
       name: "Qty",
     },
     {
-      id: "2",
+      id: "3",
       name: "Price",
     },
     {
-      id: "3",
+      id: "4",
       name: "Total Price",
     },
     {
-      id: "4",
+      id: "5",
       name: "",
     },
   ];
@@ -157,7 +188,7 @@ function Table({ items }) {
       </thead>
       <tbody>
         {items.map((item) => (
-          <TableRow key={item.id} item={item} />
+          <TableRow key={item.id} item={item} handleDelete={handleDelete} />
         ))}
       </tbody>
     </table>
@@ -165,15 +196,16 @@ function Table({ items }) {
 }
 
 function TableRow(props) {
-  const { item } = props;
+  const { item, handleDelete } = props;
   return (
     <tr className={styles["usertr"]}>
       <td className={styles["usertd"]}>{item.name}</td>
       <td className={styles["usertd"]}>{item.qty}</td>
       <td className={styles["usertd"]}>{item.price}</td>
       <td className={styles["usertd"]}>{item.price * item.qty}</td>
-      <td>
+      <td className={styles["usertd"]}>
         <button
+          onClick={() => handleDelete(item.id)}
           style={{
             borderRadius: "50%",
             width: "20px",

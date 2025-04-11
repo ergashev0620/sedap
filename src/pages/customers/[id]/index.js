@@ -1,13 +1,13 @@
 import { useParams } from "next/navigation";
-import CustomerData from "@/components/pages/customers/CustomerData";
+import { orderListData } from "@/pages/Data";
 function CustomerDetail() {
   const route = useParams();
-  const currentOrder = CustomerData.find((item) => {
-    if (item.userId === parseInt(route?.id)) {
+  const currentOrder = orderListData.find((item) => {
+    if (item.id === route?.id) {
       return true;
     }
   });
-  return <div>Hello. This is User ID {currentOrder?.userId}</div>;
+  return <div>Hello. This is User ID {currentOrder?.id}</div>;
 }
 
 export default CustomerDetail;
