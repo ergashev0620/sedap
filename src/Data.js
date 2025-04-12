@@ -187,26 +187,46 @@ export const orderListData = [
 
 export const customerData = [
   {
-    id: '1',
+    id: '191237',
+    name: 'Eren Yeager',
+    date: "26 March 2020, 12:42 AM",
     job: 'UI Designer',
     homeLocation: 'St. Kings Road 57th, Garden Hills, Chelsea - London',
     email: 'eren.yeager@mail.co.id',
     phone: '+012 345 6789',
     companyName: 'Highspeed Studios',
+    totalSpend: 79,
+    lastOrder: 119,
     userCard: {
       cardNumber: '2451 2451 2451 2451',
       cardName: 'Eren Yeagerjon',
-      cardDate: '02/21'
+      cardDate: '02/21',
+      cardBalans: 9238
     },
     items: [
       {
         id: '1',
         foodName: 'Meidum Spicy Spagethi Italiano',
         food: 'SPAGETHI',
-        price: 12.56,
+        price: 112.56,
         person: 2,
+        min: 12,
+      },
+      {
+        id: '2',
+        foodName: 'Meidum Spicy Spagethi Italiano',
+        food: 'SPAGETHI',
+        price: 42.56,
+        person: 4,
         min: 22,
-      }
+      },      {
+        id: '3',
+        foodName: 'Meidum Spicy Spagethi Italiano',
+        food: 'SPAGETHI',
+        price: 122.56,
+        person: 5,
+        min: 24,
+      },
     ]
   }
 ]

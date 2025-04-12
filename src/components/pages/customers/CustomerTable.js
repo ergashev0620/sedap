@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/customers.module.css";
-import { orderListData } from "@/Data";
+import { customerData } from "@/Data";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
@@ -42,8 +42,8 @@ export default function CustomerTable() {
           </tr>
         </thead>
         <tbody>
-          {orderListData.map((item) => (
-            <TableRow key={item.userId} item={item} />
+          {customerData.map((item) => (
+            <TableRow key={item.id} item={item} />
           ))}
         </tbody>
       </table>
@@ -81,14 +81,14 @@ function TableRow(props) {
     <tr
       className={styles["tr"]}
       style={{ cursor: "pointer" }}
-      onClick={() => goToDetails(item.userId)}
+      onClick={() => goToDetails(item.id)}
     >
       <td className={styles["td"]}>#C-{item.id}</td>
       <td className={styles["td"]}>{item.date}</td>
-      <td className={styles["td"]}>{item.customer.name}</td>
-      <td className={styles["td"]}>{item.location}</td>
-      <td className={styles["td1"]}>${item.amount}</td>
-      <td className={styles["td12"]}>${item.lastAmount}</td>
+      <td className={styles["td"]}>{item.name}</td>
+      <td className={styles["td"]}>{item.homeLocation}</td>
+      <td className={styles["td1"]}>${item.totalSpend}</td>
+      <td className={styles["td12"]}>${item.lastOrder}</td>
     </tr>
   );
 }
