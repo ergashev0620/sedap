@@ -26,11 +26,8 @@
 }
 
 .userAbout {
-  min-width: 890px;
-  max-width: 1000px;
   display: flex;
   flex-grow: 2;
-  margin-right: 39px;
   background-color: #fdfdfd;
   border: 1px solid rgb(236, 236, 236);
   padding: 30px;

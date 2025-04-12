@@ -8,9 +8,10 @@ function MainLayout(props) {
     <main
       style={{
         display: "flex",
+        maxHeight: "100vh",
       }}
     >
-      <div style={{ display: "flex", minWidth: "100wh" }}>
+      <div style={{}}>
         <Navigation />
       </div>
       <div
