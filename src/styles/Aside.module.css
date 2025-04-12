@@ -1,115 +1,112 @@
 .aside {
-    width: clamp(300px, 20vw, 345px);
-    height: 100vh;
-    max-height: 1430px;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Barlow', sans-serif;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  width: clamp(300px, 20vw, 345px);
+  max-height: 1430px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.logo{
-    background-color: unset;
+.logo {
+  background-color: unset;
 }
-.aside .aside-header{
-    margin-top: 28px;
-    margin-bottom: 28px;
-    background-color: unset;
+.aside .aside-header {
+  margin-top: 28px;
+  margin-bottom: 28px;
+  background-color: unset;
 }
-.buttonsMenu{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: unset;
-    position: relative;
+.buttonsMenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: unset;
+  position: relative;
 }
-.buttonsMenu a{
-    text-decoration: none;
-    color: black;
-    width: 250px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    border-radius: 8px;
-    background-color: unset;
-    font-weight: 500;
-    position: relative;
-    padding-left: 30px;
+.buttonsMenu a {
+  text-decoration: none;
+  color: black;
+  width: 250px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: unset;
+  font-weight: 500;
+  position: relative;
+  padding-left: 30px;
 }
 .buttonsMenu .active::before {
-    content: ' ';
-    display: block;
-    width: 8px; 
-    height: 100%; 
-    background-color: #00B074; 
-    margin-right: 15px; 
-    border-radius: 4px; 
-    position: absolute;
-    left: -20%;
+  content: " ";
+  display: block;
+  width: 8px;
+  height: 100%;
+  background-color: #00b074;
+  margin-right: 15px;
+  border-radius: 4px;
+  position: absolute;
+  left: -20%;
 }
 
-.buttonsMenu a img{
-    margin: 15px 20px;
-    background-color: unset;
+.buttonsMenu a img {
+  margin: 15px 20px;
+  background-color: unset;
 }
-.addMenus{
-    width: 260px;
-    margin-top: 39px;
-    display: flex;
-    padding: 20px;
-    background-color: #00B074;
-    border-radius: 10px;
+.addMenus {
+  width: 260px;
+  margin-top: 39px;
+  display: flex;
+  padding: 20px;
+  background-color: #00b074;
+  border-radius: 10px;
 }
-.addMenus p{
-    width: 140px;
-    font-size: 12px;
-    color: white;
-    background-color: unset;
+.addMenus p {
+  width: 140px;
+  font-size: 12px;
+  color: white;
+  background-color: unset;
 }
-.addMenusText{
-    width: 140px;
-    background-color: unset;
+.addMenusText {
+  width: 140px;
+  background-color: unset;
 }
-.addMenusText button{
-    width: 116px;
-    height: 37px;
-    color: #464255;
-    font-size: 15px;
-    background-color: #F2F5F3;
-    border: none;
-    border-radius: 5px;
-    margin-top: 8px;
-    cursor: pointer;
+.addMenusText button {
+  width: 116px;
+  height: 37px;
+  color: #464255;
+  font-size: 15px;
+  background-color: #f2f5f3;
+  border: none;
+  border-radius: 5px;
+  margin-top: 8px;
+  cursor: pointer;
 }
-.addMenus img{
-    background-color: unset;
+.addMenus img {
+  background-color: unset;
 }
-.about{
-    width: 245px;
-    background-color: unset;
-    margin-top: 59px;
-    margin-bottom: 43px;
+.about {
+  width: 245px;
+  background-color: unset;
+  margin-top: 59px;
+  margin-bottom: 43px;
 }
-.about p:nth-child(1){
-    background-color: unset;
-    color: #515151;
-    font-size: 12px;
-    margin-bottom: 5px;
+.about p:nth-child(1) {
+  background-color: unset;
+  color: #515151;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
-.about p:nth-child(2){
-    background-color: unset;
-    color: #969BA0;
-    font-size: 12px;
-    font-weight: 400px;
+.about p:nth-child(2) {
+  background-color: unset;
+  color: #969ba0;
+  font-size: 12px;
+  font-weight: 400px;
 }
-.about p:nth-child(3){
-    background-color: unset;
-    color: #969BA0;
-    font-size: 14px;
-    margin-top: 15px;
+.about p:nth-child(3) {
+  background-color: unset;
+  color: #969ba0;
+  font-size: 14px;
+  margin-top: 15px;
 }

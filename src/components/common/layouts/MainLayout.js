@@ -8,9 +8,6 @@ function MainLayout(props) {
     <main
       style={{
         display: "flex",
-        minHeight: "100vh",
-        marginLeft: '310px',
-        // minWidth: "100vw",
       }}
     >
       <div style={{ display: "flex", minWidth: "100wh" }}>

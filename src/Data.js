@@ -16,8 +16,8 @@ export const orderListData = [
     deliveredBy: {
       id: "412455",
       name: "Gudakkina shopir",
-      phone: '+12 345 5662 66',
-      time: '12:52'
+      phone: "+12 345 5662 66",
+      time: "12:52",
     },
     items: [
       {
@@ -51,8 +51,8 @@ export const orderListData = [
     deliveredBy: {
       id: "412455",
       name: "Gudakkina",
-      phone: '+12 345 5662 66',
-      time: '12:52'
+      phone: "+12 345 5662 66",
+      time: "12:52",
     },
     items: [
       {
@@ -81,8 +81,8 @@ export const orderListData = [
     deliveredBy: {
       id: "112455",
       name: "Gudakkina",
-      phone: '+12 345 5662 66',
-      time: '12:52'
+      phone: "+12 345 5662 66",
+      time: "12:52",
     },
     items: [
       {
@@ -111,8 +111,8 @@ export const orderListData = [
     deliveredBy: {
       id: "412459",
       name: "Gudakkina",
-      phone: '+12 345 5662 66',
-      time: '12:52'
+      phone: "+12 345 5662 66",
+      time: "12:52",
     },
     items: [
       {
@@ -141,8 +141,8 @@ export const orderListData = [
     deliveredBy: {
       id: "412405",
       name: "Gudakkina",
-      phone: '+12 345 5662 66',
-      time: '12:52'
+      phone: "+12 345 5662 66",
+      time: "12:52",
     },
     items: [
       {
@@ -171,8 +171,8 @@ export const orderListData = [
     deliveredBy: {
       id: "412435",
       name: "Gudakkina",
-      phone: '+12 345 5662 66',
-      time: '12:52'
+      phone: "+12 345 5662 66",
+      time: "12:52",
     },
     items: [
       {
@@ -187,46 +187,47 @@ export const orderListData = [
 
 export const customerData = [
   {
-    id: '191237',
-    name: 'Eren Yeager',
+    id: "191237",
+    name: "Eren Yeager",
     date: "26 March 2020, 12:42 AM",
-    job: 'UI Designer',
-    homeLocation: 'St. Kings Road 57th, Garden Hills, Chelsea - London',
-    email: 'eren.yeager@mail.co.id',
-    phone: '+012 345 6789',
-    companyName: 'Highspeed Studios',
+    job: "UI Designer",
+    homeLocation: "St. Kings Road 57th, Garden Hills, Chelsea - London",
+    email: "eren.yeager@mail.co.id",
+    phone: "+012 345 6789",
+    companyName: "Highspeed Studios",
     totalSpend: 79,
     lastOrder: 119,
     userCard: {
-      cardNumber: '2451 2451 2451 2451',
-      cardName: 'Eren Yeagerjon',
-      cardDate: '02/21',
-      cardBalans: 9238
+      cardNumber: "2451 2451 2451 2451",
+      cardName: "Eren Yeagerjon",
+      cardDate: "02/21",
+      cardBalans: 9238,
     },
     items: [
       {
-        id: '1',
-        foodName: 'Meidum Spicy Spagethi Italiano',
-        food: 'SPAGETHI',
+        id: "1",
+        foodName: "Meidum Spicy Spagethi Italiano",
+        food: "SPAGETHI",
         price: 112.56,
         person: 2,
         min: 12,
       },
       {
-        id: '2',
-        foodName: 'Meidum Spicy Spagethi Italiano',
-        food: 'SPAGETHI',
+        id: "2",
+        foodName: "Meidum Spicy Spagethi Italiano",
+        food: "SPAGETHI",
         price: 42.56,
         person: 4,
         min: 22,
-      },      {
-        id: '3',
-        foodName: 'Meidum Spicy Spagethi Italiano',
-        food: 'SPAGETHI',
+      },
+      {
+        id: "3",
+        foodName: "Meidum Spicy Spagethi Italiano",
+        food: "SPAGETHI",
         price: 122.56,
         person: 5,
         min: 24,
       },
-    ]
-  }
-]
+    ],
+  },
+];

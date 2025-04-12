@@ -1,206 +1,205 @@
 .container {
-    width: 100%;
-    max-width: 1468px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1468px;
+  margin: 0 auto;
 }
 
 .cusDetailHead {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .cusDetailHead h1 {
-    font-size: 32px;
-    color: #464255;
+  font-size: 32px;
+  color: #464255;
 }
 
 .cusDetailHead p {
-    font-size: 18px;
-    color: #A3A3A3;
+  font-size: 18px;
+  color: #a3a3a3;
 }
 
 .cusDetailSec {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .userAbout {
-    width: 972px;
-    margin-right: 39px;
-    background-color: #FDFDFD;
-    border: 1px solid rgb(236, 236, 236);
-    padding: 30px;
-    border-radius: 16px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.names {
-    width: 653px;
+  min-width: 890px;
+  max-width: 1000px;
+  display: flex;
+  flex-grow: 2;
+  margin-right: 39px;
+  background-color: #fdfdfd;
+  border: 1px solid rgb(236, 236, 236);
+  padding: 30px;
+  border-radius: 16px;
 }
 
 .namesHead {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .namesFooter {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .nameAndLoc h3 {
-    font-size: 36px;
-    color: #464255;
-    padding: 11px 0px 15px 0px;
+  font-size: 36px;
+  color: #464255;
+  padding: 11px 0px 15px 0px;
 }
 
 .nameAndLoc p:nth-child(2) {
-    font-size: 21px;
-    color: #00B074;
-    padding-bottom: 20px;
+  font-size: 21px;
+  color: #00b074;
+  padding-bottom: 20px;
 }
 
 .nameAndLoc p:nth-child(3) {
-    font-size: 14px;
-    color: #A3A3A3;
+  font-size: 14px;
+  color: #a3a3a3;
 }
 
 .namesFooter1 {
-    width: 100%;
-    margin: 35px 0px 17px 0px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  margin: 35px 0px 17px 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btns button:nth-child(1) {
-    padding: 16px;
-    background-color: #00B07426;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
+  padding: 16px;
+  background-color: #00b07426;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .btns button:nth-child(2) {
-    padding: 16px;
-    background-color: #5E6C9326;
-    border: none;
-    margin-left: 20px;
-    cursor: pointer;
-    border-radius: 20px;
+  padding: 16px;
+  background-color: #5e6c9326;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
 .emailNumJob {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .emailNumJob1 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .emailNumJob2 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .emailNumJob button {
-    padding: 4px;
-    background-color: #2D9CDB26;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin-right: 16px;
+  padding: 4px;
+  background-color: #2d9cdb26;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-right: 16px;
 }
 
 .emailNumJob1 button {
-    padding: 4px;
-    background-color: #00B07426;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin-right: 16px;
+  padding: 4px;
+  background-color: #00b07426;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-right: 16px;
 }
 
 .emailNumJob2 button {
-    padding: 4px;
-    background-color: #FF5B5B26;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin-right: 16px;
+  padding: 4px;
+  background-color: #ff5b5b26;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-right: 16px;
 }
 
 .cartAbout {
-    width: 457px;
-    border-radius: 16px;
-    background-color: #00B074;
-    padding: 25px 0px 0px 0px;
-    overflow: hidden;
+  max-width: 500px;
+  flex-grow: 1;
+  border-radius: 16px;
+  background-color: #00b074;
+  padding: 25px 0px 0px 0px;
+  overflow: hidden;
 }
 
 .cardName p:nth-child(1) {
-    color: white;
-    font-size: 14px;
-    margin-bottom: 3px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 3px;
 }
 
 .cardName p:nth-child(2) {
-    color: white;
-    font-size: 21px;
+  color: white;
+  font-size: 21px;
 }
 
 .cusDetailFooter {
-    width: 100%;
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .mostOrderedFood {
-    width: 713px;
-    border-radius: 24px;
-    border: 1px solid rgb(236, 236, 236);
-    background-color: #FDFDFD;
+  width: 713px;
+  border-radius: 24px;
+  border: 1px solid rgb(236, 236, 236);
+  background-color: #fdfdfd;
 }
 
 .mostLokedFood {
-    width: 713px;
-    border-radius: 24px;
-    border: 1px solid rgb(236, 236, 236);
-    background-color: #FDFDFD;
+  width: 713px;
+  border-radius: 24px;
+  border: 1px solid rgb(236, 236, 236);
+  background-color: #fdfdfd;
 }
 
 .mostOrdered p:nth-child(1) {
-    font-size: 21px;
-    color: #464255;
-    margin-bottom: 12px;
+  font-size: 21px;
+  color: #464255;
+  margin-bottom: 12px;
 }
 
 .btnAndName {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    padding: 35px 48px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding: 35px 48px 0px;
 }
 
 .mostOrdered p:nth-child(2) {
-    font-size: 12px;
-    color: #A3A3A3;
+  font-size: 12px;
+  color: #a3a3a3;
 }
 
 .mostOrderBtns {
-    width: 270px;
-    background-color: #F3F2F7;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6px;
+  width: 270px;
+  background-color: #f3f2f7;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
 }
 
 /* .mostOrderBtns button{
@@ -212,38 +211,38 @@
 } */
 
 .mostOrderBtns button {
-    padding: 7px 18px;
-    /* background-color: #FFFFFF; */
-    border-radius: 57px;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
+  padding: 7px 18px;
+  /* background-color: #FFFFFF; */
+  border-radius: 57px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .active {
-    background-color: #FFFFFF;
-    transition: .7s;
+  background-color: #ffffff;
+  transition: 0.7s;
 }
-.middle{
-    max-width: 329px;
-    margin-left: 24px;
+.middle {
+  max-width: 329px;
+  margin-left: 24px;
 }
-.middle p:nth-child(1){
-    font-size: 16px;
-    color: #464255;
-    margin-bottom: 9px;
-    font-weight: 700;
+.middle p:nth-child(1) {
+  font-size: 16px;
+  color: #464255;
+  margin-bottom: 9px;
+  font-weight: 700;
 }
-.middle p:nth-child(2){
-    font-size: 12px;
-    color: #2D9CDB;
-    margin-bottom: 17px;
+.middle p:nth-child(2) {
+  font-size: 12px;
+  color: #2d9cdb;
+  margin-bottom: 17px;
 }
-.middle p:nth-child(3){
-    font-size: 12px;
-    color: #A3A3A3;
+.middle p:nth-child(3) {
+  font-size: 12px;
+  color: #a3a3a3;
 }
-.priceBtn{
-    display: flex;
-    align-items: center;
+.priceBtn {
+  display: flex;
+  align-items: center;
 }
