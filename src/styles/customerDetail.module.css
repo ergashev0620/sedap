@@ -118,7 +118,6 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  margin-right: 16px;
 }
 
 .emailNumJob2 button {
@@ -127,7 +126,6 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  margin-right: 16px;
 }
 
 .cartAbout {
@@ -157,20 +155,6 @@
   justify-content: space-between;
 }
 
-.mostOrderedFood {
-  width: 713px;
-  border-radius: 24px;
-  border: 1px solid rgb(236, 236, 236);
-  background-color: #fdfdfd;
-}
-
-.mostLokedFood {
-  width: 713px;
-  border-radius: 24px;
-  border: 1px solid rgb(236, 236, 236);
-  background-color: #fdfdfd;
-}
-
 .mostOrdered p:nth-child(1) {
   font-size: 21px;
   color: #464255;
@@ -190,7 +174,6 @@
 }
 
 .mostOrderBtns {
-  width: 270px;
   background-color: #f3f2f7;
   border-radius: 24px;
   display: flex;

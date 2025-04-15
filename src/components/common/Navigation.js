@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import { GoHome } from "react-icons/go";
+import { GoListUnordered } from "react-icons/go";
 import styles from "@/styles/Aside.module.css";
 import Image from "next/image";
 
@@ -15,15 +15,15 @@ function Navigation(props) {
       linkName: "Dashboard",
       linkImg: "/home.png",
       href: "/dashboard",
-      icon: <GoHome color="red" />,
+      icon: <GoHome />,
     },
-    // {
-    //   id: 2,
-    //   linkName: "Order List",
-    //   linkImg: "/list.png",
-    //   href: "/orders",
-    //   icon: GoHome,
-    // },
+    {
+      id: 2,
+      linkName: "Order List",
+      linkImg: "/list.png",
+      href: "/orders",
+      icon: <GoListUnordered />,
+    },
     // // {
     // //   id: 3,
     // //   linkName: "Order Detail",
@@ -35,7 +35,7 @@ function Navigation(props) {
       linkName: "Customers",
       linkImg: "/customer.png",
       href: "/customers",
-      icon: <GoHome />,
+      icon: <GoHome/>,
     },
     // {
     //   id: 5,

@@ -13,9 +13,16 @@ function CustomerDetail() {
   const [activeFilter, setActiveFilter] = useState("Monthly");
   const [mostLikedFilter, setMostLikedFilter] = useState("Monthly");
 
+  // useEffect(() => {
+  //   if (router.query.id) {
+  //     setCurrentCustomer(customerData.find((o) => o.id === router.query.id));
+  //   }
+  // }, [router]);
+
   useEffect(() => {
     if (router.query.id) {
-      setCurrentCustomer(customerData.find((o) => o.id === router.query.id));
+      // Ensure both ids are strings
+      setCurrentCustomer(customerData.find((o) => String(o.id) === router.query.id));
     }
   }, [router]);
 
@@ -36,7 +43,7 @@ function CustomerDetail() {
             <p>Here your Customer Detail Profile</p>
           </div>
           <Grid container spacing={4} sx={{ alignItems: "center" }}>
-            <Grid size={8}>
+            <Grid size={8} sx={{justifyContent: 'space-between'}}>
               <div className={styles["userAbout"]}>
                 {/* <Image src={} alt="" width={} height={}/> */}
                 <div
@@ -147,8 +154,8 @@ function CustomerDetail() {
               </div>
             </Grid>
           </Grid>
-          <div className={styles["cusDetailFooter"]}>
-            <div className={styles["mostOrderedFood"]}>
+          <Grid container spacing={4} sx={{ marginTop: '40px' }}>
+            <Grid size={6} sx={{ borderRadius: '24px', border: '1px solid rgb(236,236,236)', backgroundColor: '#fdfdfd' }}>
               <div className={styles["btnAndName"]}>
                 <div className={styles["mostOrdered"]}>
                   <p>Most Ordered Food</p>
@@ -178,8 +185,8 @@ function CustomerDetail() {
               {currentCustomer.items.map((item) => (
                 <Order key={currentCustomer.id} item={item} />
               ))}
-            </div>
-            <div className={styles["mostLokedFood"]}>
+            </Grid>
+            <Grid size={6} sx={{ borderRadius: '24px', border: '1px solid rgb(236,236,236)', backgroundColor: '#fdfdfd' }}>
               <div className={styles["btnAndName"]}>
                 <div className={styles["mostOrdered"]}>
                   <p>Most Liked Food</p>
@@ -206,8 +213,8 @@ function CustomerDetail() {
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       ) : (
         <div>
@@ -223,47 +230,35 @@ export default CustomerDetail;
 function Order(props) {
   const { item } = props;
   return (
-    <div
-      style={{
-        padding: "12px 30px",
-        width: "100%",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
+    <Grid container sx={{padding: '15px 30px' }}>
       {/* <Image src="" alt="" width={} height={} /> */}
-      <div style={{ display: "flex" }}>
-        <div
-          style={{
-            borderRadius: "16px",
-            background: "#B9BBBD",
-            width: "87px",
-            height: "87px",
-          }}
-        ></div>
-        <div className={styles["middle"]}>
-          <p>{item.foodName}</p>
-          <p>{item.food}</p>
-          <p>
-            Serves for {item.person} Person | {item.min}mins
-          </p>
-        </div>
+      <div
+        style={{
+          borderRadius: "16px",
+          background: "#B9BBBD",
+          width: "87px",
+          height: "87px",
+        }}
+      ></div>
+      <div className={styles["middle"]}>
+        <p>{item.foodName}</p>
+        <p>{item.food}</p>
+        <p>
+          Serves for {item.person} Person | {item.min}mins
+        </p>
       </div>
-      <div className={styles["priceBtn"]}>
-        <p>${item.price}</p>
-        <button
-          style={{
-            background: "unset",
-            border: "none",
-            marginLeft: "32px",
-            cursor: "pointer",
-          }}
-        >
-          <Image src="/dotBlack.png" alt="" width={24} height={24} />
-        </button>
-      </div>
-    </div>
+      <p>${item.price}</p>
+      <button
+        style={{
+          background: "unset",
+          border: "none",
+          marginLeft: "32px",
+          cursor: "pointer",
+        }}
+      >
+        <Image src="/dotBlack.png" alt="" width={24} height={24} />
+      </button>
+    </Grid>
   );
 }
 

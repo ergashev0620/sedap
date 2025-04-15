@@ -10,9 +10,9 @@
 .status {
   display: flex;
   justify-content: center;
-  width: 212px;
-  height: 68px;
-  background-color: white;
+  /* width: 212px;
+  height: 68px; */
+  background-color: unset;
   border-radius: 12px;
 }
 .status img {
@@ -25,7 +25,7 @@
   border: none;
   font-size: 16px;
 }
-.th div {
+/* .th div {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -61,40 +61,28 @@
 .orderTable .th:nth-child(6) {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-}
+} */
 
 .onDelivery {
-  width: 150px;
-  height: 50px;
   background-color: #2d9cdb26;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 15px;
+  padding: 10px 16px;
   color: #2d9cdb;
 }
 .newOrder {
-  width: 150px;
-  height: 50px;
   background-color: #ff6d4d1a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 15px;
+  padding: 10px 16px;
   color: #ff6d4d;
 }
 .delivered {
-  width: 150px;
-  height: 50px;
   background-color: #00b07426;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 15px;
   color: #177556;
+  padding: 10px 16px;
 }
 
-.orderTable .th:nth-child(1) {
+/* .orderTable .th:nth-child(1) {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
 }
@@ -113,4 +101,8 @@
 .orderTable .td:nth-child(8) {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
+} */
+
+.status {
+  height: 100%;
 }

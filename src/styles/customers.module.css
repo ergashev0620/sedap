@@ -1,4 +1,4 @@
-.orderDiv {
+/* .orderDiv {
   display: flex;
   justify-content: space-between;
   font-family: "Barlow", sans-serif;
@@ -73,4 +73,10 @@
 .orderTable .td:nth-child(8) {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
+} */
+
+
+.tdMoney {
+  font-weight: 500;
+  color: #333;
 }
