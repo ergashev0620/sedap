@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 100%;
   max-width: 1468px;
   margin: 0 auto;
@@ -11,67 +11,67 @@
 .cusDetailHead h1 {
   font-size: 32px;
   color: #464255;
-}
+} */
 
-.cusDetailHead p {
+/* .cusDetailHead p {
   font-size: 18px;
   color: #a3a3a3;
-}
+} */
 
-.cusDetailSec {
+/* .cusDetailSec {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
+} */
 
-.userAbout {
+/* .userAbout {
   display: flex;
   flex-grow: 2;
   background-color: #fdfdfd;
   border: 1px solid rgb(236, 236, 236);
   padding: 30px;
   border-radius: 16px;
-}
+} */
 
-.namesHead {
+/* .namesHead {
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
+} */
 
-.namesFooter {
+/* .namesFooter {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
-.nameAndLoc h3 {
+/* .nameAndLoc h3 {
   font-size: 36px;
   color: #464255;
   padding: 11px 0px 15px 0px;
-}
+} */
 
-.nameAndLoc p:nth-child(2) {
+/* .nameAndLoc p:nth-child(2) {
   font-size: 21px;
   color: #00b074;
   padding-bottom: 20px;
-}
-
+} */
+/* 
 .nameAndLoc p:nth-child(3) {
   font-size: 14px;
   color: #a3a3a3;
-}
+} */
 
-.namesFooter1 {
+/* .namesFooter1 {
   width: 100%;
   margin: 35px 0px 17px 0px;
   display: flex;
   justify-content: space-between;
-}
+} */
 
-.btns button:nth-child(1) {
+/* .btns button:nth-child(1) {
   padding: 16px;
   background-color: #00b07426;
   border-radius: 20px;
@@ -86,22 +86,22 @@
   margin-left: 20px;
   cursor: pointer;
   border-radius: 20px;
-}
-
+} */
+/* 
 .emailNumJob {
   display: flex;
   align-items: center;
-}
+} */
 
-.emailNumJob1 {
+/* .emailNumJob1 {
   display: flex;
   align-items: center;
-}
+} */
 
-.emailNumJob2 {
+/* .emailNumJob2 {
   display: flex;
   align-items: center;
-}
+} */
 
 .emailNumJob button {
   padding: 4px;

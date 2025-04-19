@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { GoHome } from "react-icons/go";
-import { GoListUnordered } from "react-icons/go";
+import { GoHome, GoListUnordered } from "react-icons/go";
 import styles from "@/styles/Aside.module.css";
 import Image from "next/image";
 
@@ -35,29 +34,29 @@ function Navigation(props) {
       linkName: "Customers",
       linkImg: "/customer.png",
       href: "/customers",
-      icon: <GoHome/>,
+      icon: <GoHome />,
     },
-    // {
-    //   id: 5,
-    //   linkName: "Analytics",
-    //   linkImg: "/analis.png",
-    //   href: "/analis",
-    //   icon: GoHome,
-    // },
-    // {
-    //   id: 6,
-    //   linkName: "Review",
-    //   linkImg: "/review.png",
-    //   href: "/review",
-    //   icon: GoHome,
-    // },
-    // {
-    //   id: 7,
-    //   linkName: "Foods",
-    //   linkImg: "/food.png",
-    //   href: "/food",
-    //   icon: GoHome,
-    // },
+    {
+      id: 5,
+      linkName: "Analytics",
+      linkImg: "/analis.png",
+      href: "/analis",
+      icon: GoHome,
+    },
+    {
+      id: 6,
+      linkName: "Review",
+      linkImg: "/review.png",
+      href: "/review",
+      icon: GoHome,
+    },
+    {
+      id: 7,
+      linkName: "Foods",
+      linkImg: "/food.png",
+      href: "/foods",
+      icon: GoHome,
+    },
     // {
     //   id: 8,
     //   linkName: "Food Detail",
@@ -71,32 +70,38 @@ function Navigation(props) {
     //   linkImg: "/customerDetail.png",
     //   href: "/customerDetail",
     // },
-    // {
-    //   id: 10,
-    //   linkName: "Calendar",
-    //   linkImg: "/calendar.png",
-    //   href: "/calendar",
-    //   icon: GoHome,
-    // },
-    // {
-    //   id: 11,
-    //   linkName: "Chat",
-    //   linkImg: "/chat.png",
-    //   href: "/chat",
-    //   icon: GoHome,
-    // },
-    // {
-    //   id: 12,
-    //   linkName: "Wallet",
-    //   linkImg: "/wallet.png",
-    //   href: "/wallet",
-    //   icon: GoHome,
-    // },
+    {
+      id: 10,
+      linkName: "Calendar",
+      linkImg: "/calendar.png",
+      href: "/calendar",
+      icon: GoHome,
+    },
+    {
+      id: 11,
+      linkName: "Chat",
+      linkImg: "/chat.png",
+      href: "/chat",
+      icon: GoHome,
+    },
+    {
+      id: 12,
+      linkName: "Wallet",
+      linkImg: "/wallet.png",
+      href: "/wallet",
+      icon: GoHome,
+    },
   ];
   return (
     <aside className={styles["aside"]}>
       <div className={styles["aside-header"]}>
-        <Image src="/Sedap.png" alt="" className={styles["logo"]} width={167} height={49} />
+        <Image
+          src="/Sedap.png"
+          alt=""
+          className={styles["logo"]}
+          width={167}
+          height={49}
+        />
         <p
           style={{
             color: "#B9BBBD",
@@ -114,7 +119,6 @@ function Navigation(props) {
             <CustomLink
               key={id}
               linkName={linkName}
-              linkImg={linkImg}
               href={href}
               active={active}
               icon={icon}
@@ -127,7 +131,12 @@ function Navigation(props) {
           <p>Please, organize your menus through button bellow!</p>
           <button>+Add Menus</button>
         </div>
-        <Image src="/illustration.png" alt="illustration" width={76.6} height={90.8} />
+        <Image
+          src="/illustration.png"
+          alt="illustration"
+          width={76.6}
+          height={90.8}
+        />
       </div>
       <div className={styles["about"]}>
         <p>Sedap Restaurant Admin Dashboard</p>
@@ -139,7 +148,7 @@ function Navigation(props) {
 }
 
 function CustomLink(props) {
-  const { linkName, linkImg, href, active, icon } = props;
+  const { linkName, href, active, icon } = props;
   return (
     <>
       <Link
@@ -151,7 +160,7 @@ function CustomLink(props) {
         }}
       >
         {icon}
-        {linkName}
+        <p style={{ marginLeft: "10px" }}>{linkName}</p>
       </Link>
     </>
   );

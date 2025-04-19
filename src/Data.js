@@ -569,7 +569,7 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2451",
       cardName: "Eren Yeagerjon",
       cardDate: "02/21",
-      cardBalans: 9238
+      cardBalans: 9238,
     },
     items: [
       {
@@ -578,7 +578,7 @@ export const customerData = [
         food: "SPAGETHI",
         price: 112.56,
         person: 2,
-        min: 12
+        min: 12,
       },
       {
         id: 2,
@@ -586,7 +586,7 @@ export const customerData = [
         food: "SPAGETHI",
         price: 42.56,
         person: 4,
-        min: 22
+        min: 22,
       },
       {
         id: 3,
@@ -594,9 +594,9 @@ export const customerData = [
         food: "SPAGETHI",
         price: 122.56,
         person: 5,
-        min: 24
-      }
-    ]
+        min: 24,
+      },
+    ],
   },
   {
     id: 191238,
@@ -613,26 +613,26 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2452",
       cardName: "Mikasa Ackerman",
       cardDate: "06/23",
-      cardBalans: 11234
+      cardBalans: 11234,
     },
     items: [
       {
         id: 1,
         foodName: "Spicy Grilled Chicken",
         food: "CHICKEN",
-        price: 90.00,
+        price: 90.0,
         person: 3,
-        min: 15
+        min: 15,
       },
       {
         id: 2,
         foodName: "Pasta Arrabiata",
         food: "PASTA",
-        price: 55.20,
+        price: 55.2,
         person: 4,
-        min: 18
-      }
-    ]
+        min: 18,
+      },
+    ],
   },
   {
     id: 191239,
@@ -649,26 +649,26 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2453",
       cardName: "Levi Ackerman",
       cardDate: "11/24",
-      cardBalans: 8324
+      cardBalans: 8324,
     },
     items: [
       {
         id: 1,
         foodName: "Chicken Caesar Salad",
         food: "SALAD",
-        price: 72.50,
+        price: 72.5,
         person: 3,
-        min: 20
+        min: 20,
       },
       {
         id: 2,
         foodName: "Beef Wellington",
         food: "BEEF",
-        price: 90.00,
+        price: 90.0,
         person: 4,
-        min: 25
-      }
-    ]
+        min: 25,
+      },
+    ],
   },
   {
     id: 191240,
@@ -685,7 +685,7 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2454",
       cardName: "Armin Arlert",
       cardDate: "08/22",
-      cardBalans: 6725
+      cardBalans: 6725,
     },
     items: [
       {
@@ -694,17 +694,17 @@ export const customerData = [
         food: "PIZZA",
         price: 45.99,
         person: 2,
-        min: 10
+        min: 10,
       },
       {
         id: 2,
         foodName: "Lentil Soup",
         food: "SOUP",
-        price: 22.50,
+        price: 22.5,
         person: 4,
-        min: 16
-      }
-    ]
+        min: 16,
+      },
+    ],
   },
   {
     id: 191241,
@@ -721,18 +721,18 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2455",
       cardName: "Jean Kirstein",
       cardDate: "04/25",
-      cardBalans: 5440
+      cardBalans: 5440,
     },
     items: [
       {
         id: 1,
         foodName: "Cheeseburger Deluxe",
         food: "BURGER",
-        price: 58.00,
+        price: 58.0,
         person: 3,
-        min: 12
-      }
-    ]
+        min: 12,
+      },
+    ],
   },
   {
     id: 191237,
@@ -749,7 +749,7 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2451",
       cardName: "Eren Yeagerjon",
       cardDate: "02/21",
-      cardBalans: 9238
+      cardBalans: 9238,
     },
     items: [
       {
@@ -758,7 +758,7 @@ export const customerData = [
         food: "SPAGETHI",
         price: 112.56,
         person: 2,
-        min: 12
+        min: 12,
       },
       {
         id: 2,
@@ -766,7 +766,7 @@ export const customerData = [
         food: "SPAGETHI",
         price: 42.56,
         person: 4,
-        min: 22
+        min: 22,
       },
       {
         id: 3,
@@ -774,9 +774,9 @@ export const customerData = [
         food: "SPAGETHI",
         price: 122.56,
         person: 5,
-        min: 24
-      }
-    ]
+        min: 24,
+      },
+    ],
   },
   {
     id: 191238,
@@ -793,26 +793,26 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2452",
       cardName: "Mikasa Ackerman",
       cardDate: "06/23",
-      cardBalans: 11234
+      cardBalans: 11234,
     },
     items: [
       {
         id: 1,
         foodName: "Spicy Grilled Chicken",
         food: "CHICKEN",
-        price: 90.00,
+        price: 90.0,
         person: 3,
-        min: 15
+        min: 15,
       },
       {
         id: 2,
         foodName: "Pasta Arrabiata",
         food: "PASTA",
-        price: 55.20,
+        price: 55.2,
         person: 4,
-        min: 18
-      }
-    ]
+        min: 18,
+      },
+    ],
   },
   {
     id: 191239,
@@ -829,26 +829,26 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2453",
       cardName: "Levi Ackerman",
       cardDate: "11/24",
-      cardBalans: 8324
+      cardBalans: 8324,
     },
     items: [
       {
         id: 1,
         foodName: "Chicken Caesar Salad",
         food: "SALAD",
-        price: 72.50,
+        price: 72.5,
         person: 3,
-        min: 20
+        min: 20,
       },
       {
         id: 2,
         foodName: "Beef Wellington",
         food: "BEEF",
-        price: 90.00,
+        price: 90.0,
         person: 4,
-        min: 25
-      }
-    ]
+        min: 25,
+      },
+    ],
   },
   {
     id: 191240,
@@ -865,7 +865,7 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2454",
       cardName: "Armin Arlert",
       cardDate: "08/22",
-      cardBalans: 6725
+      cardBalans: 6725,
     },
     items: [
       {
@@ -874,17 +874,17 @@ export const customerData = [
         food: "PIZZA",
         price: 45.99,
         person: 2,
-        min: 10
+        min: 10,
       },
       {
         id: 2,
         foodName: "Lentil Soup",
         food: "SOUP",
-        price: 22.50,
+        price: 22.5,
         person: 4,
-        min: 16
-      }
-    ]
+        min: 16,
+      },
+    ],
   },
   {
     id: 191241,
@@ -901,18 +901,18 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2455",
       cardName: "Jean Kirstein",
       cardDate: "04/25",
-      cardBalans: 5440
+      cardBalans: 5440,
     },
     items: [
       {
         id: 1,
         foodName: "Cheeseburger Deluxe",
         food: "BURGER",
-        price: 58.00,
+        price: 58.0,
         person: 3,
-        min: 12
-      }
-    ]
+        min: 12,
+      },
+    ],
   },
   {
     id: 191237,
@@ -929,7 +929,7 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2451",
       cardName: "Eren Yeagerjon",
       cardDate: "02/21",
-      cardBalans: 9238
+      cardBalans: 9238,
     },
     items: [
       {
@@ -938,7 +938,7 @@ export const customerData = [
         food: "SPAGETHI",
         price: 112.56,
         person: 2,
-        min: 12
+        min: 12,
       },
       {
         id: 2,
@@ -946,7 +946,7 @@ export const customerData = [
         food: "SPAGETHI",
         price: 42.56,
         person: 4,
-        min: 22
+        min: 22,
       },
       {
         id: 3,
@@ -954,9 +954,9 @@ export const customerData = [
         food: "SPAGETHI",
         price: 122.56,
         person: 5,
-        min: 24
-      }
-    ]
+        min: 24,
+      },
+    ],
   },
   {
     id: 191238,
@@ -973,26 +973,26 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2452",
       cardName: "Mikasa Ackerman",
       cardDate: "06/23",
-      cardBalans: 11234
+      cardBalans: 11234,
     },
     items: [
       {
         id: 1,
         foodName: "Spicy Grilled Chicken",
         food: "CHICKEN",
-        price: 90.00,
+        price: 90.0,
         person: 3,
-        min: 15
+        min: 15,
       },
       {
         id: 2,
         foodName: "Pasta Arrabiata",
         food: "PASTA",
-        price: 55.20,
+        price: 55.2,
         person: 4,
-        min: 18
-      }
-    ]
+        min: 18,
+      },
+    ],
   },
   {
     id: 191239,
@@ -1009,26 +1009,26 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2453",
       cardName: "Levi Ackerman",
       cardDate: "11/24",
-      cardBalans: 8324
+      cardBalans: 8324,
     },
     items: [
       {
         id: 1,
         foodName: "Chicken Caesar Salad",
         food: "SALAD",
-        price: 72.50,
+        price: 72.5,
         person: 3,
-        min: 20
+        min: 20,
       },
       {
         id: 2,
         foodName: "Beef Wellington",
         food: "BEEF",
-        price: 90.00,
+        price: 90.0,
         person: 4,
-        min: 25
-      }
-    ]
+        min: 25,
+      },
+    ],
   },
   {
     id: 191240,
@@ -1045,7 +1045,7 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2454",
       cardName: "Armin Arlert",
       cardDate: "08/22",
-      cardBalans: 6725
+      cardBalans: 6725,
     },
     items: [
       {
@@ -1054,17 +1054,17 @@ export const customerData = [
         food: "PIZZA",
         price: 45.99,
         person: 2,
-        min: 10
+        min: 10,
       },
       {
         id: 2,
         foodName: "Lentil Soup",
         food: "SOUP",
-        price: 22.50,
+        price: 22.5,
         person: 4,
-        min: 16
-      }
-    ]
+        min: 16,
+      },
+    ],
   },
   {
     id: 191241,
@@ -1081,17 +1081,54 @@ export const customerData = [
       cardNumber: "2451 2451 2451 2455",
       cardName: "Jean Kirstein",
       cardDate: "04/25",
-      cardBalans: 5440
+      cardBalans: 5440,
     },
     items: [
       {
         id: 1,
         foodName: "Cheeseburger Deluxe",
         food: "BURGER",
-        price: 58.00,
+        price: 58.0,
         person: 3,
-        min: 12
-      }
-    ]
-  }
+        min: 12,
+      },
+    ],
+  },
+];
+export const foodData = [
+  {
+    id: "1",
+    img: "",
+    name: "Spicy Mozarella with Barbeque",
+    title: "food",
+    context: "noodle",
+  },
+  {
+    id: "2",
+    img: "",
+    name: "Spicy Mozarella with Barbeque",
+    title: "food",
+    context: "noodle",
+  },
+  {
+    id: "3",
+    img: "",
+    name: "Spicy Mozarella with Barbeque",
+    title: "food",
+    context: "noodle",
+  },
+  {
+    id: "4",
+    img: "",
+    name: "Spicy Mozarella with Barbeque",
+    title: "food",
+    context: "noodle",
+  },
+  {
+    id: "5",
+    img: "",
+    name: "Spicy Mozarella with Barbeque",
+    title: "food",
+    context: "noodle",
+  },
 ];
