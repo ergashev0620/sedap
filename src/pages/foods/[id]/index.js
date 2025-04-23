@@ -1,9 +1,18 @@
 import Head from "next/head";
-import OrdersList from "@/components/pages/orders/OrdersList";
 import MainLayout from "@/components/common/layouts/MainLayout";
-import styles from "@/styles/Home.module.css";
-
+import { useEffect, useState } from "react";
+import { foodData } from "@/Data";
+import { useRouter } from "next/router";
 export default function FoodDetail() {
+  const router = useRouter()
+  const [currentFood, setCurrentFood] = useState(null)
+  useEffect(() => {
+    if (router.query.id) {
+      setCurrentFood(
+        foodData.find((o) => String(o.id) === router.query.id)
+      );
+    }
+  }, [router]);
   return (
     <>
       <Head>
@@ -12,7 +21,7 @@ export default function FoodDetail() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>Foods id</div>
+      <div>Foods id: {currentFood.id}</div>
     </>
   );
 }
