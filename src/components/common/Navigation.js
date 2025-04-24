@@ -4,6 +4,15 @@ import { useRouter } from "next/router";
 import { GoHome, GoListUnordered } from "react-icons/go";
 import styles from "@/styles/Aside.module.css";
 import Image from "next/image";
+import HomeIcon from '@mui/icons-material/Home';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import PersonIcon from '@mui/icons-material/Person';
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
+import CreateIcon from '@mui/icons-material/Create';
+import EmojiFoodBeverageIcon from '@mui/icons-material/EmojiFoodBeverage';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import TextsmsIcon from '@mui/icons-material/Textsms';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 function Navigation(props) {
   const router = useRouter();
@@ -14,14 +23,14 @@ function Navigation(props) {
       linkName: "Dashboard",
       linkImg: "/home.png",
       href: "/dashboard",
-      icon: <GoHome />,
+      icon: <HomeIcon />,
     },
     {
       id: 2,
       linkName: "Order List",
       linkImg: "/list.png",
       href: "/orders",
-      icon: <GoListUnordered />,
+      icon: <FormatListBulletedIcon />,
     },
     // // {
     // //   id: 3,
@@ -34,28 +43,28 @@ function Navigation(props) {
       linkName: "Customers",
       linkImg: "/customer.png",
       href: "/customers",
-      icon: <GoHome />,
+      icon: <PersonIcon />,
     },
     {
       id: 5,
       linkName: "Analytics",
       linkImg: "/analis.png",
       href: "/analis",
-      icon: GoHome,
+      icon: <SignalCellularAltIcon/>,
     },
     {
       id: 6,
       linkName: "Review",
       linkImg: "/review.png",
       href: "/review",
-      icon: GoHome,
+      icon: <CreateIcon/>,
     },
     {
       id: 7,
       linkName: "Foods",
       linkImg: "/food.png",
       href: "/foods",
-      icon: GoHome,
+      icon: <EmojiFoodBeverageIcon/>,
     },
     // {
     //   id: 8,
@@ -75,21 +84,21 @@ function Navigation(props) {
       linkName: "Calendar",
       linkImg: "/calendar.png",
       href: "/calendar",
-      icon: GoHome,
+      icon: <CalendarMonthIcon/>,
     },
     {
       id: 11,
       linkName: "Chat",
       linkImg: "/chat.png",
       href: "/chat",
-      icon: GoHome,
+      icon: <TextsmsIcon/>,
     },
     {
       id: 12,
       linkName: "Wallet",
       linkImg: "/wallet.png",
       href: "/wallet",
-      icon: GoHome,
+      icon: <AccountBalanceWalletIcon/>,
     },
   ];
   return (
