@@ -38,8 +38,6 @@ export default function Edit() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Updated data:", formData);
-        // bu yerda backendga yuborish yoki update qilish kiritiladi
     };
     return (
         <Box
@@ -60,7 +58,7 @@ export default function Edit() {
                     marginBottom: "30px",
                 }}
             >
-                Create New Card
+                Edit Card
             </h1>
             <form onSubmit={handleSubmit}>
                 <Grid container spacing={2}>

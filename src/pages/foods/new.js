@@ -7,7 +7,9 @@ export default function New() {
     category: "",
     type: "",
     price: "",
-    comment: "",
+    discription: "",
+    ingredients: "",
+    nutritionInfo: ""
   });
 
   const handleChange = (e) => {

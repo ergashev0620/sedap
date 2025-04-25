@@ -6,8 +6,8 @@ import { foodData } from "@/Data";
 import FoodsMap from "@/components/pages/foods/FoodsMap";
 import FoodMapSkeleton from "@/components/pages/foods/FoodMapSkeleton";
 import FoodSearch from "@/components/pages/foods/FoodSearch";
-import FoodSelect from "@/components/pages/foods/FoodSelect";
 import NewBtn from "@/components/pages/foods/NewBtn";
+import FoodBtn from "@/components/pages/foods/FoodBtn";
 import {
   Dialog,
   DialogActions,
@@ -22,6 +22,7 @@ export default function Foods() {
   const [filteredFoods, setFilteredFoods] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
+  const [selected, setSelected] = useState("left");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -59,7 +60,7 @@ export default function Foods() {
       <Head>
         <title>Foods</title>
       </Head>
-      <div style={{display: 'flex', flexDirection: 'column', maxWidth: '1400px', margin: '0 auto'}}>
+      <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '1400px', margin: '0 auto' }}>
         <div
           style={{
             display: "flex",
@@ -80,21 +81,7 @@ export default function Foods() {
             }}
           >
             <FoodSearch onChange={setSearchValue} />
-            <FoodSelect
-              img="/foodSelectImg.png"
-              item={{
-                name: "noodle",
-                name2: "pizza",
-                name3: "burger",
-              }}
-            />
-            <FoodSelect
-              img="/foodSelectImg2.png"
-              item={{
-                name: "food",
-                name2: "drink",
-              }}
-            />
+            <FoodBtn selected={selected} onSelect={setSelected} />
             <NewBtn />
           </div>
         </div>
@@ -114,7 +101,7 @@ export default function Foods() {
             )
           ) : (
             <>
-              <FoodsMap data={foods} handleDeleteClick={handleDeleteClick}/>
+              <FoodsMap data={foods} handleDeleteClick={handleDeleteClick} selected={selected} />
               <Dialog
                 open={openDialog}
                 onClose={cancelDelete}

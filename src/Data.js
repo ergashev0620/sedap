@@ -1098,10 +1098,13 @@ export const customerData = [
 export const foodData = [
   {
     id: "1",
-    category: "Food",
+    category: "Food", 
     type: "Burger",
     price: 100,
     name: "Burger Jumbo Special With Spicy",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   minim vLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.eniam,mco laboris nisi ut aliquip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat."
   },
   {
     id: "2",
@@ -1109,6 +1112,9 @@ export const foodData = [
     price: 100,
     type: "pizza",
     name: "Pizza la Piazza Special Nuggets",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   miniLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.m veniam,mco laboris nisi ut aliquip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum dolor sit amLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.et, consectetur adipiscing elit ex ea commodo consequat."
   },
   {
     id: "3",
@@ -1116,6 +1122,9 @@ export const foodData = [
     price: 100,
     type: "Noodle",
     name: "Spicy Mozarella with Barbeque",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   minLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.im veniam,mco laboris nisi ut aliquip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum dolLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.or sit amet, consectetur adipiscing elit ex ea commodo consequat."
   },
   {
     id: "4",
@@ -1123,6 +1132,9 @@ export const foodData = [
     type: "Sprite",
     price: 100,
     name: "Sprite Flavour with Avocado Juice",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   minLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.im veniam,mco laboris nisi ut aliquip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum doloLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.r sit amet, consectetur adipiscing elit ex ea commodo consequat."
   },
   {
     id: "5",
@@ -1130,6 +1142,9 @@ export const foodData = [
     type: "Burger",
     price: 100,
     name: "Burger Jumbo Special With Spicy",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   minim veniam,mcoLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat. laboris nisi ut aliquip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum dolor sit amet, consLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.ectetur adipiscing elit ex ea commodo consequat."
   },
   {
     id: "6",
@@ -1137,6 +1152,9 @@ export const foodData = [
     price: 100,
     type: "pizza",
     name: "Pizza la Piazza Special Nuggets",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   minim veniam,mco laboriLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.s nisi ut aliquip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum dolor sit amet, consectetuLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.r adipiscing elit ex ea commodo consequat."
   },
   {
     id: "7",
@@ -1144,6 +1162,9 @@ export const foodData = [
     price: 100,
     type: "Noodle",
     name: "Spicy Mozarella with Barbeque",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   minim veniam,mco laboris nisiLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat. ut aliquip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.iscing elit ex ea commodo consequat."
   },
   {
     id: "8",
@@ -1151,6 +1172,9 @@ export const foodData = [
     type: "Sprite",
     price: 100,
     name: "Sprite Flavour with Avocado Juice",
+    discription: "Lorem ipsum dolor sit amet, consecteunt ut labore et dolore.",
+    ingredients: "Lorem ipsum   minim veniam,mco laboris nisi ut aliLorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.quip ex ea commodo consequat.",
+    nutritionInfo: "Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing elit ex ea commodo consequat.elit ex ea commodo consequat."
   },
 ];
 
