@@ -155,7 +155,6 @@ import { useRouter } from "next/router";
 
 function FoodsMap({ selected, data, handleDeleteClick }) {
   const router = useRouter();
-  console.log("-=-=-", data);
   const handleEdit = (food) => {
     router.push({
       pathname: `/foods/${food.id}/edit`,
@@ -337,7 +336,7 @@ function FoodsMap({ selected, data, handleDeleteClick }) {
                     fontSize: "22px",
                   }}
                 >
-                  {food.price} so'm
+                  {food.price} so`m
                 </p>
               </div>
             </div>

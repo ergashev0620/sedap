@@ -12,8 +12,8 @@ function FoodMapSkeleton() {
         gap: "20px",
       }}
     >
-      {foodData.map(() => {
-        return <Variants />;
+      {foodData.map((_, index) => {
+        return <Variants key={index}/>;
       })}
     </div>
   );

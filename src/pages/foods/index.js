@@ -108,10 +108,10 @@ export default function Foods() {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
               >
-                <DialogTitle id="alert-dialog-title">{"O'chirishni tasdiqlaysizmi?"}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">O`chirishni tasdiqlaysizmi?</DialogTitle>
                 <DialogContent>
                   <DialogContentText id="alert-dialog-description">
-                    "<strong>{foods?.find(item => item.id === selectedId)?.name}</strong>"ni rostan ham o'chirmoqchimisiz? Bu amalni qaytarib bo'lmaydi.
+                    <strong>{foods?.find(item => item.id === selectedId)?.name}</strong>ni rostan ham o`chirmoqchimisiz? Bu amalni qaytarib bo`lmaydi.
                   </DialogContentText>
                 </DialogContent>
                 <DialogActions>
@@ -119,14 +119,14 @@ export default function Foods() {
                     Bekor qilish
                   </Button>
                   <Button onClick={confirmDelete} color="error" autoFocus>
-                    O'chirish
+                    O`chirish
                   </Button>
                 </DialogActions>
               </Dialog>
             </>
           )
         ) : (
-          <FoodMapSkeleton count={3} />
+          <FoodMapSkeleton count={3}  />
         )}
       </div>
     </>
