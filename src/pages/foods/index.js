@@ -23,6 +23,23 @@ export default function Foods() {
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   const [selected, setSelected] = useState("left");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://192.168.100.108:1337/api/foods?populate=*&Asilbek=true", {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.data);
+        // setFoods(data.data);
+        // setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        // setIsLoading(false);
+      });
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -55,12 +72,20 @@ export default function Foods() {
     setOpenDialog(false);
     setSelectedId(null);
   };
+
   return (
     <>
       <Head>
         <title>Foods</title>
       </Head>
-      <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '1400px', margin: '0 auto' }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          maxWidth: "1400px",
+          margin: "0 auto",
+        }}
+      >
         <div
           style={{
             display: "flex",
@@ -101,17 +126,27 @@ export default function Foods() {
             )
           ) : (
             <>
-              <FoodsMap data={foods} handleDeleteClick={handleDeleteClick} selected={selected} />
+              <FoodsMap
+                data={foods}
+                handleDeleteClick={handleDeleteClick}
+                selected={selected}
+              />
               <Dialog
                 open={openDialog}
                 onClose={cancelDelete}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
               >
-                <DialogTitle id="alert-dialog-title">O`chirishni tasdiqlaysizmi?</DialogTitle>
+                <DialogTitle id="alert-dialog-title">
+                  O`chirishni tasdiqlaysizmi?
+                </DialogTitle>
                 <DialogContent>
                   <DialogContentText id="alert-dialog-description">
-                    <strong>{foods?.find(item => item.id === selectedId)?.name}</strong>ni rostan ham o`chirmoqchimisiz? Bu amalni qaytarib bo`lmaydi.
+                    <strong>
+                      {foods?.find((item) => item.id === selectedId)?.name}
+                    </strong>
+                    ni rostan ham o`chirmoqchimisiz? Bu amalni qaytarib
+                    bo`lmaydi.
                   </DialogContentText>
                 </DialogContent>
                 <DialogActions>
@@ -126,7 +161,7 @@ export default function Foods() {
             </>
           )
         ) : (
-          <FoodMapSkeleton count={3}  />
+          <FoodMapSkeleton count={3} />
         )}
       </div>
     </>
