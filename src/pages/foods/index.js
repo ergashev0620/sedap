@@ -16,37 +16,40 @@ import {
   DialogTitle,
   Button,
 } from "@mui/material";
+import useFetchApiItems from "@/hooks/useFetchApiItems";
 export default function Foods() {
-  const [foods, setFoods] = useState(null);
+  // const [foods, setFoods] = useState(null);
   const [searchValue, setSearchValue] = useState("");
   const [filteredFoods, setFilteredFoods] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   const [selected, setSelected] = useState("left");
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    fetch("http://192.168.100.108:1337/api/foods?populate=*&Asilbek=true", {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data.data);
-        // setFoods(data.data);
-        // setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        // setIsLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://192.168.100.108:1337/api/foods?populate=*&Asilbek=true", {
+  //     method: "GET",
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data.data);
+  //       // setFoods(data.data);
+  //       // setIsLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       // setIsLoading(false);
+  //     });
+  // }, []);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setFoods(foodData);
-    }, 1000);
-    return () => clearTimeout(timeout);
-  }, []);
+  const [foods, isLoading] = useFetchApiItems("/foods?populate=*&Asilbek=true");
+
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setFoods(foodData);
+  //   }, 1000);
+  //   return () => clearTimeout(timeout);
+  // }, []);
 
   useEffect(() => {
     if (foods && searchValue.length > 0) {
